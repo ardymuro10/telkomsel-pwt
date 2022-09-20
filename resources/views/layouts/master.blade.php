@@ -119,16 +119,22 @@
                                 <p>Daftar Pengguna</p>
                             </a>
                         </li>
-                        <li class="nav-item {{ Route::is('mail-monitoring.cover-letter') || Route::is('mail-monitoring.certificate') || Route::is('mail-monitoring.different-data') || Route::is('mail-monitoring.business-info') || Route::is('mail-monitoring.mail-poor') ? 'menu-open' : null }}">
-                            <a href="#" class="nav-link {{ Route::is('mail-monitoring.cover-letter') || Route::is('mail-monitoring.certificate') || Route::is('mail-monitoring.different-data') || Route::is('mail-monitoring.business-info') || Route::is('mail-monitoring.mail-poor') ? 'active' : null }}">
-                                <i class="nav-icon fas fa-envelope"></i>
+                        <li class="nav-item {{ Route::is('data.data1') || Route::is('data.data2') ? 'menu-open' : null }}">
+                            <a href="#" class="nav-link {{ Route::is('data.data1') || Route::is('data.data2') ? 'active' : null }}">
+                                <i class="nav-icon fas fa-folder"></i>
                                 <p>Data<i class="right fas fa-angle-left"></i></p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{ route('mail-monitoring.cover-letter') }}" class="nav-link {{ Route::is('mail-monitoring.cover-letter') ? 'active' : null }}">
+                                    <a href="{{ route('data.data1') }}" class="nav-link {{ Route::is('data.data1') ? 'active' : null }}">
                                         <i class="far fa-circle nav-icon text-primary"></i>
                                         <p>Data1</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('data.data2') }}" class="nav-link {{ Route::is('data.data2') ? 'active' : null }}">
+                                        <i class="far fa-circle nav-icon text-primary"></i>
+                                        <p>Data2</p>
                                     </a>
                                 </li>
                             </ul>
@@ -170,7 +176,8 @@
             {{-- <div class="float-right d-none d-sm-inline">
                 Pemerintah Desa Gumelem Wetan
             </div> --}}
-            <strong>Copyright &copy; {{ date('Y') }} <span class="text-primary font-weight-bold">Pemerintah Desa Gumelem Wetan</span>.</strong> All rights
+            <strong>Copyright &copy; {{ date('Y') }} made with by <a class="text-primary font-weight-bold" href="https://t.me/Misa_Reamo" target="_blank">Ghozy</a>
+                & <a class="text-primary font-weight-bold" href="https://t.me/adiknyahokage" target="_blank">Muro</a>.</strong> All rights
             reserved.
         </footer>
     </div>

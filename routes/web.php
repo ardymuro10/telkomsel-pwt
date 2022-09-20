@@ -5,6 +5,8 @@ use App\Models\CoverLetter;
 use App\Models\DifferentData;
 use App\Models\BusinessInfo;
 use App\Models\MailPoor;
+use App\Models\Data1;
+use App\Models\Data2;
 use App\Models\PublicComplaint;
 use App\Models\UserList;
 use Illuminate\Support\Facades\Route;
@@ -75,22 +77,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/death-person', App\Http\Livewire\DeathPerson\Index::class)->name('death-person');
     Route::get('/public-complaints', App\Http\Livewire\PublicComplaint\Index::class)->name('public-complaints');
     Route::get('/user-list', App\Http\Livewire\UserList\Index::class)->name('user-list');
+    Route::name('data.')->prefix('/data')->group(function () {
+        Route::get('/data1', App\Http\Livewire\Data\Data1\Index::class)->name('data1');
+        Route::get('/data2', App\Http\Livewire\Data\Data2\Index::class)->name('data2');
+    });
 });
 
-// Route::get('/hello', function () {
-//     // $update = json_decode(file_get_contents("php://input"), TRUE);
-//     // $message = $update['message'];
-//     // $chat_id = $message['chat']['id'];
-//     // $text = $message['text'];
-
-//     // return view('hello2', [
-//     //     "message" => $message,
-//     //     "chat_id" => $chat_id,
-//     //     "text" => $message
-//     // ]);
-//     return view('hello2'
-//     );
-// });
 
 Route::get('request/post-data', [App\Http\Controllers\Controller::class, 'viewPostData']);
 Route::post('request/post-data', [App\Http\Controllers\Controller::class, 'processPostData']);
