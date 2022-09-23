@@ -63,7 +63,7 @@
                                 <p>Dashboard</p>
                             </a>
                         </li>
-                        <li class="nav-item {{ Route::is('mail-monitoring.cover-letter') || Route::is('mail-monitoring.certificate') || Route::is('mail-monitoring.different-data') || Route::is('mail-monitoring.business-info') || Route::is('mail-monitoring.mail-poor') ? 'menu-open' : null }}">
+                        {{-- <li class="nav-item {{ Route::is('mail-monitoring.cover-letter') || Route::is('mail-monitoring.certificate') || Route::is('mail-monitoring.different-data') || Route::is('mail-monitoring.business-info') || Route::is('mail-monitoring.mail-poor') ? 'menu-open' : null }}">
                             <a href="#" class="nav-link {{ Route::is('mail-monitoring.cover-letter') || Route::is('mail-monitoring.certificate') || Route::is('mail-monitoring.different-data') || Route::is('mail-monitoring.business-info') || Route::is('mail-monitoring.mail-poor') ? 'active' : null }}">
                                 <i class="nav-icon fas fa-envelope"></i>
                                 <p>Monitoring Surat<i class="right fas fa-angle-left"></i></p>
@@ -118,7 +118,7 @@
                                 <i class="nav-icon fas fa-user-friends"></i>
                                 <p>Daftar Pengguna</p>
                             </a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item {{ Route::is('data.data1') || Route::is('data.data2') ? 'menu-open' : null }}">
                             <a href="#" class="nav-link {{ Route::is('data.data1') || Route::is('data.data2') ? 'active' : null }}">
                                 <i class="nav-icon fas fa-folder"></i>

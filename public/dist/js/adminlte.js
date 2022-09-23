@@ -1054,6 +1054,13 @@
     * jQuery API
     * ====================================================
     */
+   $(document).ready(function () {
+    $('#dtHorizontalVerticalExample').DataTable({
+      "scrollX": true,
+      "scrollY": 200,
+    });
+    $('.dataTables_length').addClass('bs-select');
+  });
 
   $__default["default"].fn[NAME$9] = ExpandableTable._jQueryInterface;
   $__default["default"].fn[NAME$9].Constructor = ExpandableTable;
