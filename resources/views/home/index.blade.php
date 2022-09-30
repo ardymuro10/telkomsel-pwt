@@ -7,28 +7,39 @@ use Carbon\Carbon;
     <div class="col-4">
         <div class="small-box">
             <div class="inner">
-                <h4>Data Masuk Hari Ini : {{ $countToday }}</h4>
-            </div>
-        </div>
-    </div>
-    <div class="col-4">
-        <div class="small-box">
-            <div class="inner">
-                <h4>Surat Sudah Dicetak : {{ $countSudah }}</h4>
-            </div>
-        </div>
-    </div>
-    <div class="col-4">
-        <div class="small-box">
-            <div class="inner">
-                <h4>Surat Belum Dicetak : {{ $countBelum }}</h4>
+                <h4>Total Data : {{ $totalData }}</h4>
             </div>
         </div>
     </div>
 </div>
 
-<div class="row" wire:poll="checkData">
-    {{-- <meta http-equiv="refresh" content="3" > --}}
+<div class="row">
+    <div class="col-6" style="text-align: center">
+        <div class="small-box">
+            <div class="inner">
+                <a type="submit">
+                    <h4><b>Upload</b></h4>
+                    <img src="{{ asset('img/upload.png') }}" height="250">
+                </a>
+                {{-- <a type="submit" class="fas fa-file-upload">File Excel</a> --}}
+            </div>
+        </div>
+    </div>
+    <div class="col-6" style="text-align: center">
+        <div class="small-box">
+            <div class="inner">
+                <a type="submit">
+                    <h4><b>Download</b></h4>
+                    <img src="{{ asset('img/download.png') }}" height="250">
+                </a>
+                {{-- <a type="submit" class="fas fa-file-upload">File Excel</a> --}}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{-- <div class="row" wire:poll="checkData">
+    <meta http-equiv="refresh" content="3" >
     <div class="col-6 col-md-3">
         <div class="small-box bg-primary">
             <div class="inner">
@@ -145,8 +156,6 @@ use Carbon\Carbon;
                         <p class="font-weight-bold mb-0">{{ $business->name }}</p>
                         <small class="text-muted mb-0" style="font-style: italic;">{{ Carbon\Carbon::createFromTimestamp(strtotime($business->created_at))->format('d-m-Y H:i:s') }}</small>
                         <small class="text-muted mb-0">| <b>{{ $business->status }}</b></small>
-                        {{-- {{ $cover_letter->created_at->format('d-m-Y H:i:s') }}
-                        <small class="text-muted mb-0" style="font-style: italic;">{{ \Carbon\Carbon::parse($business->created_at)->format('d-m-Y H:i:s') }}</small>--}}
                     </div>
                     @endif
                 @empty
@@ -187,7 +196,7 @@ use Carbon\Carbon;
         </div>
     </div>
 
-    {{-- <div class="col-6 col-md-3">
+    <div class="col-6 col-md-3">
         <div class="small-box bg-info">
             <div class="inner">
                 <h3>{{ $death_person->count() }}</h3>
@@ -216,7 +225,7 @@ use Carbon\Carbon;
                 @endforelse
             </div>
         </div>
-    </div> --}}
+    </div>
 
     <div class="col-6 col-md-3">
         <div class="small-box bg-success">
@@ -248,5 +257,5 @@ use Carbon\Carbon;
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 

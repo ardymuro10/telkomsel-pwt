@@ -15,7 +15,7 @@ class Index extends Component
         return view('data.data1.index', [
             'data2s' => $this->search === null ?
                 Data2::latest()->get() :
-                Data2::latest()->where('id','like', '%' . $this->search . '%')->get(),
+                Data2::latest()->where('prog_jpp','like', '%' . $this->search . '%')->get(),
             // 'data2s' => Data2::latest()->get(),
         ])
         ->layoutData([

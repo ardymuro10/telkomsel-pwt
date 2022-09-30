@@ -119,8 +119,8 @@
                                 <p>Daftar Pengguna</p>
                             </a>
                         </li> --}}
-                        <li class="nav-item {{ Route::is('data.data1') || Route::is('data.data2') ? 'menu-open' : null }}">
-                            <a href="#" class="nav-link {{ Route::is('data.data1') || Route::is('data.data2') ? 'active' : null }}">
+                        <li class="nav-item {{ Route::is('data.data1') || Route::is('data.data2') || Route::is('data.data3') ? 'menu-open' : null }}">
+                            <a href="#" class="nav-link {{ Route::is('data.data1') || Route::is('data.data2') || Route::is('data.data3') ? 'active' : null }}">
                                 <i class="nav-icon fas fa-folder"></i>
                                 <p>Data<i class="right fas fa-angle-left"></i></p>
                             </a>
@@ -135,6 +135,12 @@
                                     <a href="{{ route('data.data2') }}" class="nav-link {{ Route::is('data.data2') ? 'active' : null }}">
                                         <i class="far fa-circle nav-icon text-primary"></i>
                                         <p>Data2</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('data.data3') }}" class="nav-link {{ Route::is('data.data3') ? 'active' : null }}">
+                                        <i class="far fa-circle nav-icon text-primary"></i>
+                                        <p>EQP</p>
                                     </a>
                                 </li>
                             </ul>

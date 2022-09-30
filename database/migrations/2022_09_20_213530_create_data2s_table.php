@@ -15,19 +15,19 @@ return new class extends Migration
     {
         Schema::create('data2s', function (Blueprint $table) {
             $table->id();
-            $table->text('unik');
-            $table->text('unik_krdnt');
-            $table->text('id_site');
-            $table->text('site_name');
-            $table->text('lat');
-            $table->text('long');
-            $table->text('sp_prog_jpp');
-            $table->text('objective');
-            $table->text('sow');
-            $table->text('prog_jpp');
-            $table->text('prog_jppsimple');
-            // $table->text('jpp_part');
-            // $table->text('remark_jpp');
+            $table->string('unik')->nullable();
+            $table->integer('unik_krdnt')->nullable();
+            $table->string('id_site')->nullable();
+            $table->string('site_name')->nullable();
+            $table->integer('lat')->nullable();
+            $table->integer('long')->nullable();
+            $table->string('sp_prog_jpp')->nullable();
+            $table->string('objective')->nullable();
+            $table->string('sow')->nullable();
+            $table->string('prog_jpp')->nullable();
+            $table->string('prog_jppsimple')->nullable();
+            $table->string('jpp_part')->nullable();
+            $table->string('remark_jpp')->nullable();
             // $table->text('cek_lat');
             // $table->text('cek_long');
             // $table->text('infra_type');

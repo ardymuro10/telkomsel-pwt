@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Home;
 
+use App\Models\Data2;
 use App\Models\Certificate;
 use App\Models\CoverLetter;
 use App\Models\DeathPerson;
@@ -23,6 +24,7 @@ class Index extends Component
     public $business_info;
     public $mail_poor;
     public $countToday = 0;
+    public $data2;
     //public $user_list;
 
     public function mount()
@@ -75,6 +77,8 @@ class Index extends Component
         ) data');
         $this->countBelum = $countBelum[0] ? $countBelum[0]->Belum : 0;
 
+        $totalData = DB::select('SELECT count(*) AS Total From (SELECT id FROM data2s) data');
+        $this->totalData = $totalData[0] ? $totalData[0]->Total : 0;
     }
 
     public function render()
