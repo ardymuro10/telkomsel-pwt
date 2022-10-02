@@ -15,12 +15,13 @@ return new class extends Migration
     {
         Schema::create('data2s', function (Blueprint $table) {
             $table->id();
+            //eqp
             $table->string('unik')->nullable();
-            $table->integer('unik_krdnt')->nullable();
+            $table->string('unik_krdnt')->nullable();
             $table->string('id_site')->nullable();
             $table->string('site_name')->nullable();
-            $table->integer('lat')->nullable();
-            $table->integer('long')->nullable();
+            $table->string('lat')->nullable();
+            $table->string('long')->nullable();
             $table->string('sp_prog_jpp')->nullable();
             $table->string('objective')->nullable();
             $table->string('sow')->nullable();
@@ -30,31 +31,37 @@ return new class extends Migration
             $table->string('remark_jpp')->nullable();
             // $table->text('cek_lat');
             // $table->text('cek_long');
-            // $table->text('infra_type');
-            // $table->text('site_id_tp');
-            // $table->text('plan_tower_prov');
-            // $table->text('tower_hg');
-            // $table->text('isd_totsel');
-            // $table->text('isd_cattotsel');
-            // $table->text('site_terdekat');
-            // $table->text('isd_totp');
-            // $table->text('isd_cattotp');
-            // $table->text('tp_id');
-            // $table->text('tp_name');
-            // $table->text('tower_hgview');
-            // $table->text('isd_tocomp');
-            // $table->text('isd_cattocomp');
-            // $table->text('kompet');
-            // $table->text('isd_usuljpp');
-            // $table->text('isd_cat');
-            // $table->text('sitename_rev');
-            // $table->text('luas_hh');
-            // $table->text('cat_hh');
-            // $table->text('mrbad');
-            // $table->text('mrgood');
-            // $table->text('total');
-            // $table->text('per_badmr');
-            // $table->text('mr_4gcov');
+
+            //tower
+            $table->string('infra_type')->nullable();
+            $table->string('site_id_tp')->nullable();
+            $table->string('plan_tower_prov')->nullable();
+            $table->integer('tower_hg')->nullable();
+
+            //review
+            $table->string('isd_totsel')->nullable();
+            $table->string('isd_cattotsel')->nullable();
+            $table->string('site_terdekat')->nullable();
+            $table->string('isd_totp')->nullable();
+            $table->string('isd_cattotp')->nullable();
+            $table->string('tp_id')->nullable();
+            $table->string('tp_name')->nullable();
+            $table->integer('tower_hgview')->nullable();
+            $table->string('isd_tocomp')->nullable();
+            $table->string('isd_cattocomp')->nullable();
+            $table->string('kompet')->nullable();
+            $table->string('isd_usuljpp')->nullable();
+            // $table->string('isd_cat')->nullable();
+            $table->string('sitename_rev')->nullable();
+            $table->string('luas_hh')->nullable();
+            // $table->string('cat_hh')->nullable();
+            $table->integer('mrbad')->nullable();
+            $table->integer('mrgood')->nullable();
+            $table->string('total')->nullable();
+            $table->string('per_badmr')->nullable();
+            $table->string('mr_4gcov')->nullable();
+
+
             // $table->text('branch');
             // $table->text('cluster');
             // $table->text('do');

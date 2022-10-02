@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Livewire\Data\Data3;
+namespace App\Http\Livewire\Data\Data5;
 
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
-use App\Models\Data3;
+use App\Models\Data5;
 use App\Models\Data2;
 
 class Datatable extends DataTableComponent
@@ -58,31 +58,79 @@ class Datatable extends DataTableComponent
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Lat", "lat")
+            Column::make("ISD (m) To Tsel", "isd_totsel")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Long", "long")
+            Column::make("ISD CAT To Tsel", "isd_cattotsel")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Special Program JPP", "sp_prog_jpp")
+            Column::make("Site Terdekat", "site_terdekat")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Objective", "objective")
+            Column::make("ISD (m) To TP", "isd_totp")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("SOW", "sow")
+            Column::make("ISD CAT To TP", "isd_cattotp")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Program JPP 2023", "prog_jpp")
+            Column::make("TP Id", "tp_id")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Program JPP 2023 Simple", "prog_jppsimple")
+            Column::make("TP Name", "tp_name")
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet(),
+            Column::make("Tower Height", "tower_hgview")
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet(),
+            Column::make("ISD (m) To Competitor", "isd_tocomp")
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet(),
+            Column::make("ISD CAT To Competitor", "isd_cattocomp")
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet(),
+            Column::make("Kompetitor", "kompet")
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet(),
+            Column::make("ISD Usulan JPP", "isd_usuljpp")
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet(),
+            Column::make("Site Name", "sitename_rev")
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet(),
+            Column::make("Luas HouseHold (km2)", "luas_hh")
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet(),
+            Column::make("MR Bad (<=-105)", "mrbad")
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet(),
+            Column::make("MR Good (>-105)", "mrgood")
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet(),
+            Column::make("Total", "total")
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet(),
+            Column::make("Percentage Bad MR", "per_badmr")
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet(),
+            Column::make("MR 4G Coverage", "mr_4gcov")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),

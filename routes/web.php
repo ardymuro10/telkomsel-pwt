@@ -81,6 +81,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/data1', App\Http\Livewire\Data\Data1\Index::class)->name('data1');
         Route::get('/data2', App\Http\Livewire\Data\Data2\Index::class)->name('data2');
         Route::get('/data3', App\Http\Livewire\Data\Data3\Index::class)->name('data3');
+        Route::get('/data4', App\Http\Livewire\Data\Data4\Index::class)->name('data4');
+        Route::get('/data5', App\Http\Livewire\Data\Data5\Index::class)->name('data5');
     });
 });
 

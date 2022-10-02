@@ -40,11 +40,11 @@ class Index extends Component
 
     protected $rules = [
         'data3.unik' => ['required', 'string', 'max:100'],
-        'data3.unik_krdnt' => ['required', 'int'],
+        'data3.unik_krdnt' => ['required', 'string', 'max:100'],
         'data3.id_site' => ['required', 'string', 'max:100'],
         'data3.site_name' => ['required', 'string', 'max:100'],
-        'data3.lat' => ['required', 'int'],
-        'data3.long' => ['required', 'int'],
+        'data3.lat' => ['required', 'string'],
+        'data3.long' => ['required', 'string'],
         'data3.sp_prog_jpp' => ['required', 'string', 'max:100'],
         'data3.objective' => ['required', 'string', 'max:100'],
         'data3.sow' => ['required', 'string', 'max:100'],
@@ -53,10 +53,6 @@ class Index extends Component
     ];
 
     protected $validationAttributes  = [
-        'data3.name' => 'nama',
-        'data3.birth_date' => 'tanggal lahir',
-        'data3.burial_date' => 'tanggal meninggal',
-        'data3.burial_place' => 'tempat pemakaman',
         'data3.unik' => 'unik',
         'data3.unik_krdnt' => 'unik koordinat',
         'data3.id_site' => 'id site',
@@ -99,6 +95,7 @@ class Index extends Component
         $this->resetErrorBag();
         $data = $this->validate();
         $this->data3 = $data3->create($data['data3']);
+        $this->reset(['data3', 'form_mode']);
         $this->dispatchBrowserEvent('modal-hide', ['modal' => 'edit-data3']);
         $this->emit('refresh-table');
         session()->flash('success', 'Berhasil menambahkan data');
@@ -117,6 +114,7 @@ class Index extends Component
         $this->resetErrorBag();
         $data = $this->validate();
         $this->data3 = $data3->update($data['data3']);
+        $this->reset(['data3', 'form_mode']);
         $this->dispatchBrowserEvent('modal-hide', ['modal' => 'edit-data3']);
         $this->emit('refresh-table');
         session()->flash('success', 'Berhasil mengubah data');

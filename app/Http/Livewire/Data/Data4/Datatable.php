@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Livewire\Data\Data3;
+namespace App\Http\Livewire\Data\Data4;
 
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
-use App\Models\Data3;
+use App\Models\Data4;
 use App\Models\Data2;
 
 class Datatable extends DataTableComponent
@@ -58,31 +58,19 @@ class Datatable extends DataTableComponent
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Lat", "lat")
+            Column::make("Infra Type", "infra_type")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Long", "long")
+            Column::make("Site Id TP", "site_id_tp")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Special Program JPP", "sp_prog_jpp")
+            Column::make("Plan Tower Provider", "plan_tower_prov")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Objective", "objective")
-                ->sortable()
-                ->searchable()
-                ->collapseOnTablet(),
-            Column::make("SOW", "sow")
-                ->sortable()
-                ->searchable()
-                ->collapseOnTablet(),
-            Column::make("Program JPP 2023", "prog_jpp")
-                ->sortable()
-                ->searchable()
-                ->collapseOnTablet(),
-            Column::make("Program JPP 2023 Simple", "prog_jppsimple")
+            Column::make("Tower Height", "tower_hg")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),

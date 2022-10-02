@@ -19,7 +19,7 @@ use Carbon\Carbon;
             <div class="inner">
                 <a type="submit">
                     <h4><b>Upload</b></h4>
-                    <img src="{{ asset('img/upload.png') }}" height="250">
+                    <img src="{{ asset('img/upload.png') }}" height="200">
                 </a>
                 {{-- <a type="submit" class="fas fa-file-upload">File Excel</a> --}}
             </div>
@@ -30,7 +30,7 @@ use Carbon\Carbon;
             <div class="inner">
                 <a type="submit">
                     <h4><b>Download</b></h4>
-                    <img src="{{ asset('img/download.png') }}" height="250">
+                    <img src="{{ asset('img/download.png') }}" height="200">
                 </a>
                 {{-- <a type="submit" class="fas fa-file-upload">File Excel</a> --}}
             </div>

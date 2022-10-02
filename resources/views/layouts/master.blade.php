@@ -119,13 +119,13 @@
                                 <p>Daftar Pengguna</p>
                             </a>
                         </li> --}}
-                        <li class="nav-item {{ Route::is('data.data1') || Route::is('data.data2') || Route::is('data.data3') ? 'menu-open' : null }}">
-                            <a href="#" class="nav-link {{ Route::is('data.data1') || Route::is('data.data2') || Route::is('data.data3') ? 'active' : null }}">
+                        <li class="nav-item {{ Route::is('data.data1') || Route::is('data.data2') || Route::is('data.data3') || Route::is('data.data4') || Route::is('data.data5') ? 'menu-open' : null }}">
+                            <a href="#" class="nav-link {{ Route::is('data.data1') || Route::is('data.data2') || Route::is('data.data3') || Route::is('data.data4') || Route::is('data.data5') ? 'active' : null }}">
                                 <i class="nav-icon fas fa-folder"></i>
                                 <p>Data<i class="right fas fa-angle-left"></i></p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="{{ route('data.data1') }}" class="nav-link {{ Route::is('data.data1') ? 'active' : null }}">
                                         <i class="far fa-circle nav-icon text-primary"></i>
                                         <p>Data1</p>
@@ -136,11 +136,23 @@
                                         <i class="far fa-circle nav-icon text-primary"></i>
                                         <p>Data2</p>
                                     </a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a href="{{ route('data.data3') }}" class="nav-link {{ Route::is('data.data3') ? 'active' : null }}">
                                         <i class="far fa-circle nav-icon text-primary"></i>
                                         <p>EQP</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('data.data4') }}" class="nav-link {{ Route::is('data.data4') ? 'active' : null }}">
+                                        <i class="far fa-circle nav-icon text-primary"></i>
+                                        <p>Tower</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('data.data5') }}" class="nav-link {{ Route::is('data.data5') ? 'active' : null }}">
+                                        <i class="far fa-circle nav-icon text-primary"></i>
+                                        <p>Review</p>
                                     </a>
                                 </li>
                             </ul>
