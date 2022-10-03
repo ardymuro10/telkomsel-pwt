@@ -61,28 +61,32 @@ return new class extends Migration
             $table->string('per_badmr')->nullable();
             $table->string('mr_4gcov')->nullable();
 
+            //demografi
+            $table->string('branch')->nullable();
+            $table->string('cluster')->nullable();
+            $table->string('do')->nullable();
+            $table->string('id_desa')->nullable();
+            $table->string('nama_desa')->nullable();
+            $table->string('nama_kec')->nullable();
+            $table->string('nama_pul')->nullable();
+            $table->string('nama_kab')->nullable();
 
-            // $table->text('branch');
-            // $table->text('cluster');
-            // $table->text('do');
-            // $table->text('id_desa');
-            // $table->text('nama_desa');
-            // $table->text('nama_kec');
-            // $table->text('nama_pul');
-            // $table->text('nama_kab');
-            // $table->text('reg_rev_proj');
-            // $table->text('kom_rev');
-            // $table->text('rev_cat_pr');
-            // $table->text('up_regrev');
-            // $table->text('rev_predsifa');
-            // $table->text('rem_revsifa');
-            // $table->text('pot_nsbranch');
-            // $table->text('arpu_kec');
-            // $table->text('rank_perns');
-            // $table->text('prior_srm');
-            // $table->text('rank_reg');
-            // $table->text('rank_rtpe');
-            // $table->text('prior_finreg');
+            //sales
+            $table->string('reg_rev_proj')->nullable();
+            $table->string('kom_rev')->nullable();
+            $table->string('rev_cat_pr')->nullable();
+            // $table->string('up_regrev')->nullable();
+            // $table->string('rev_predsifa')->nullable();
+            // $table->string('rem_revsifa')->nullable();
+            $table->string('pot_nsbranch')->nullable();
+            $table->string('arpu_kec')->nullable();
+            $table->string('rank_perns')->nullable();
+            $table->integer('prior_srm')->nullable();
+            $table->integer('rank_reg')->nullable();
+            $table->string('rank_rtpe')->nullable();
+            $table->string('prior_finreg')->nullable();
+
+            //
             // $table->text('pre_surveipot');
             // $table->text('pln');
             // $table->text('ass_los');

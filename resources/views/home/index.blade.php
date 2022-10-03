@@ -4,7 +4,7 @@ use Carbon\Carbon;
 ?>
 
 <div class="row">
-    <div class="col-4">
+    <div class="col-3">
         <div class="small-box">
             <div class="inner">
                 <h4>Total Data : {{ $totalData }}</h4>
@@ -19,9 +19,8 @@ use Carbon\Carbon;
             <div class="inner">
                 <a type="submit">
                     <h4><b>Upload</b></h4>
-                    <img src="{{ asset('img/upload.png') }}" height="200">
+                    <img src="{{ asset('img/upload.png') }}" height="150">
                 </a>
-                {{-- <a type="submit" class="fas fa-file-upload">File Excel</a> --}}
             </div>
         </div>
     </div>
@@ -30,9 +29,8 @@ use Carbon\Carbon;
             <div class="inner">
                 <a type="submit">
                     <h4><b>Download</b></h4>
-                    <img src="{{ asset('img/download.png') }}" height="200">
+                    <img src="{{ asset('img/download.png') }}" height="150">
                 </a>
-                {{-- <a type="submit" class="fas fa-file-upload">File Excel</a> --}}
             </div>
         </div>
     </div>

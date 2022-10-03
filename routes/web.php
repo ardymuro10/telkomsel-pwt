@@ -39,8 +39,7 @@ Route::middleware('auth')->group(function () {
                 'cover_letter' => $coverLetter
             ]);
             return $pdf->stream('surat-pengantar-'.Str::slug($coverLetter['name'], '-').'-'.now()->timestamp.'.pdf');
-        });
-        // ->name('cover-letter.pdf');
+        })->name('cover-letter.pdf');
         Route::get('/certificate', App\Http\Livewire\MailMonitoring\Certificate\Index::class)->name('certificate');
         Route::get('/certificate/{id}/pdf', function ($id, Certificate $certificate) {
             $certificate = $certificate->findOrFail($id)->toArray();
@@ -80,9 +79,11 @@ Route::middleware('auth')->group(function () {
     Route::name('data.')->prefix('/data')->group(function () {
         Route::get('/data1', App\Http\Livewire\Data\Data1\Index::class)->name('data1');
         Route::get('/data2', App\Http\Livewire\Data\Data2\Index::class)->name('data2');
-        Route::get('/data3', App\Http\Livewire\Data\Data3\Index::class)->name('data3');
-        Route::get('/data4', App\Http\Livewire\Data\Data4\Index::class)->name('data4');
-        Route::get('/data5', App\Http\Livewire\Data\Data5\Index::class)->name('data5');
+        Route::get('/eqp', App\Http\Livewire\Data\Data3\Index::class)->name('eqp');
+        Route::get('/tower', App\Http\Livewire\Data\Data4\Index::class)->name('tower');
+        Route::get('/review', App\Http\Livewire\Data\Data5\Index::class)->name('review');
+        Route::get('/demografi', App\Http\Livewire\Data\Data6\Index::class)->name('demografi');
+        Route::get('/sales', App\Http\Livewire\Data\Data7\Index::class)->name('sales');
     });
 });
 
