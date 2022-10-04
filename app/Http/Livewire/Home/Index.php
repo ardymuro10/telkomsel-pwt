@@ -25,6 +25,7 @@ class Index extends Component
     public $mail_poor;
     public $countToday = 0;
     public $data2;
+    public $upex, $mode;
     //public $user_list;
 
     public function mount()
@@ -79,7 +80,16 @@ class Index extends Component
 
         $totalData = DB::select('SELECT count(*) AS Total From (SELECT id FROM data2s) data');
         $this->totalData = $totalData[0] ? $totalData[0]->Total : 0;
+
+        $this->mode = 'add';
     }
+
+    public $form_mode = [
+        'add' => [
+            'action' => 'addRow',
+            'text' => 'Upload'
+        ]
+    ];
 
     public function render()
     {
@@ -89,64 +99,82 @@ class Index extends Component
         ]);
     }
 
-    public function checkData()
+    public function addAction()
     {
-        $cover_letters = CoverLetter::latest()->get();
-        $certificates = Certificate::latest()->get();
-        // $death_person = DeathPerson::latest()->get();
-        $public_complaints = PublicComplaint::latest()->get();
-        $different_data = DifferentData::latest()->get();
-        $mail_poor = MailPoor::latest()->get();
-        $business_info = BusinessInfo::latest()->get();
-        //$user_list = UserList::latest()->get();
-
-        // if ($cover_letters->count() > $this->cover_letters->count()) {
-        //     $this->dispatchBrowserEvent('show-notification', [
-        //         'message' => "Terdapat ".$cover_letters->count()-$this->cover_letters->count()." pengajuan surat pengantar baru !",
-        //     ]);
-        //     $this->cover_letters = $cover_letters;
-        // }
-        // if ($certificates->count() > $this->certificates->count()) {
-        //     $this->dispatchBrowserEvent('show-notification', [
-        //         'message' => "Terdapat ".$certificates->count()-$this->certificates->count()." pengajuan surat keterangan domisili baru !",
-        //     ]);
-        //     $this->certificates = $certificates;
-        // }
-        // if ($death_person->count() > $this->death_person->count()) {
-        //     $this->dispatchBrowserEvent('show-notification', [
-        //         'message' => $death_person->count()-$this->death_person->count()." orang meninggal tercatat !",
-        //     ]);
-        //     $this->death_person = $death_person;
-        // }
-        // if ($public_complaints->count() > $this->public_complaints->count()) {
-        //     $this->dispatchBrowserEvent('show-notification', [
-        //         'message' => "Terdapat ".$public_complaints->count()-$this->public_complaints->count()." pengaduan masyarakat baru !",
-        //     ]);
-        //     $this->public_complaints = $public_complaints;
-        // }
-        // if ($different_data->count() > $this->different_data->count()) {
-        //     $this->dispatchBrowserEvent('show-notification', [
-        //         'message' => "Terdapat ".$different_data->count()-$this->different_data->count()." permohonan beda data !",
-        //     ]);
-        //     $this->different_data = $different_data;
-        // }
-        // if ($business_info->count() > $this->business_info->count()) {
-        //     $this->dispatchBrowserEvent('show-notification', [
-        //         'message' => "Terdapat ".$business_info->count()-$this->business_info->count()." permohonan surat ket usaha !",
-        //     ]);
-        //     $this->business_info = $business_info;
-        // }
-        // if ($mail_poor->count() > $this->mail_poor->count()) {
-        //     $this->dispatchBrowserEvent('show-notification', [
-        //         'message' => "Terdapat ".$mail_poor->count()-$this->mail_poor->count()." permohonan surat miskin !",
-        //     ]);
-        //     $this->mail_poor = $mail_poor;
-        // }
-        // if ($user_list->count() > $this->user_list->count()) {
-        //     $this->dispatchBrowserEvent('show-notification', [
-        //         'message' => "Terdapat ".$user_list->count()-$this->user_list->count()." permohonan daftar pengguna !",
-        //     ]);
-        //     $this->user_list = $user_list;
-        // }
+        $this->mode = 'add';
+        $this->resetErrorBag();
+        $this->dispatchBrowserEvent('modal-show', ['modal' => 'up-excel']);
     }
+
+    public function addRow(Data2 $upex)
+    {
+        $this->resetErrorBag();
+        $data = $this->validate();
+        $this->upex = $upex->create($data['upex']);
+        $this->reset(['upex', 'form_mode']);
+        $this->dispatchBrowserEvent('modal-hide', ['modal' => 'up-excel']);
+        $this->emit('refresh-table');
+        session()->flash('success', 'Berhasil menambahkan data');
+    }
+
+    // public function checkData()
+    // {
+    //     $cover_letters = CoverLetter::latest()->get();
+    //     $certificates = Certificate::latest()->get();
+    //     $death_person = DeathPerson::latest()->get();
+    //     $public_complaints = PublicComplaint::latest()->get();
+    //     $different_data = DifferentData::latest()->get();
+    //     $mail_poor = MailPoor::latest()->get();
+    //     $business_info = BusinessInfo::latest()->get();
+    //     $user_list = UserList::latest()->get();
+
+    //     if ($cover_letters->count() > $this->cover_letters->count()) {
+    //         $this->dispatchBrowserEvent('show-notification', [
+    //             'message' => "Terdapat ".$cover_letters->count()-$this->cover_letters->count()." pengajuan surat pengantar baru !",
+    //         ]);
+    //         $this->cover_letters = $cover_letters;
+    //     }
+    //     if ($certificates->count() > $this->certificates->count()) {
+    //         $this->dispatchBrowserEvent('show-notification', [
+    //             'message' => "Terdapat ".$certificates->count()-$this->certificates->count()." pengajuan surat keterangan domisili baru !",
+    //         ]);
+    //         $this->certificates = $certificates;
+    //     }
+    //     if ($death_person->count() > $this->death_person->count()) {
+    //         $this->dispatchBrowserEvent('show-notification', [
+    //             'message' => $death_person->count()-$this->death_person->count()." orang meninggal tercatat !",
+    //         ]);
+    //         $this->death_person = $death_person;
+    //     }
+    //     if ($public_complaints->count() > $this->public_complaints->count()) {
+    //         $this->dispatchBrowserEvent('show-notification', [
+    //             'message' => "Terdapat ".$public_complaints->count()-$this->public_complaints->count()." pengaduan masyarakat baru !",
+    //         ]);
+    //         $this->public_complaints = $public_complaints;
+    //     }
+    //     if ($different_data->count() > $this->different_data->count()) {
+    //         $this->dispatchBrowserEvent('show-notification', [
+    //             'message' => "Terdapat ".$different_data->count()-$this->different_data->count()." permohonan beda data !",
+    //         ]);
+    //         $this->different_data = $different_data;
+    //     }
+    //     if ($business_info->count() > $this->business_info->count()) {
+    //         $this->dispatchBrowserEvent('show-notification', [
+    //             'message' => "Terdapat ".$business_info->count()-$this->business_info->count()." permohonan surat ket usaha !",
+    //         ]);
+    //         $this->business_info = $business_info;
+    //     }
+    //     if ($mail_poor->count() > $this->mail_poor->count()) {
+    //         $this->dispatchBrowserEvent('show-notification', [
+    //             'message' => "Terdapat ".$mail_poor->count()-$this->mail_poor->count()." permohonan surat miskin !",
+    //         ]);
+    //         $this->mail_poor = $mail_poor;
+    //     }
+    //     if ($user_list->count() > $this->user_list->count()) {
+    //         $this->dispatchBrowserEvent('show-notification', [
+    //             'message' => "Terdapat ".$user_list->count()-$this->user_list->count()." permohonan daftar pengguna !",
+    //         ]);
+    //         $this->user_list = $user_list;
+    //     }
+    // }
 }
