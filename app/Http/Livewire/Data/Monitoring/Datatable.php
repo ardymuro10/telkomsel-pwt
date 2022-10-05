@@ -1,30 +1,24 @@
 <?php
 
-namespace App\Http\Livewire\Data\Data3;
+namespace App\Http\Livewire\Data\Monitoring;
 
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
-use App\Models\Data3;
-use App\Models\Data2;
+use App\Models\Monitoring;
 
 class Datatable extends DataTableComponent
 {
-    protected $model = Data2::class;
+    protected $model = Monitoring::class;
 
     protected $listeners = [
         'refresh-table' => 'refresh'
     ];
 
-    public function refresh()
-    {
-        //
-    }
-
     public function configure(): void
     {
         $this->setPrimaryKey('id');
         $this->setDefaultSort('id');
-        $this->setColumnSelectStatus(true);
+        $this->setColumnSelectStatus(false);
         $this->setTheadAttributes([
             'class' => 'text-nowrap',
         ]);
@@ -42,50 +36,24 @@ class Datatable extends DataTableComponent
     public function columns(): array
     {
         return [
-            Column::make("Unik", "unik")
+            Column::make("Site Id", "site_id")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Unik Koordinat", "unik_krdnt")
+            Column::make("List Program", "list_program")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Site Id", "id_site")
+            Column::make("Status", "status")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Site Name", "site_name")
+            Column::make("Vendor", "vendor")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Lat", "lat")
-                ->sortable()
-                ->searchable()
-                ->collapseOnTablet(),
-            Column::make("Long", "long")
-                ->sortable()
-                ->searchable()
-                ->collapseOnTablet(),
-            Column::make("Special Program JPP", "sp_prog_jpp")
-                ->sortable()
-                ->searchable()
-                ->collapseOnTablet(),
-            Column::make("Objective", "objective")
-                ->sortable()
-                ->searchable()
-                ->collapseOnTablet(),
-            Column::make("SOW", "sow")
-                ->sortable()
-                ->searchable()
-                ->collapseOnTablet(),
-            Column::make("Program JPP 2023", "prog_jpp")
-                ->sortable()
-                ->searchable()
-                ->collapseOnTablet(),
-            Column::make("Program JPP 2023 Simple", "prog_jppsimple")
-                ->sortable()
-                ->searchable()
-                ->collapseOnTablet(),
+            Column::make("Last Update", "updated_at")
+                ->sortable(),
             Column::make('Opsi', 'id')
                 ->format(function($value, $row, Column $column) {
                     return view('components.datatable.action', [
