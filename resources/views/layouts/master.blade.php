@@ -28,6 +28,7 @@
             display: none !important;
         }
     </style>
+    @livewireStyles
 
 </head>
 
@@ -240,6 +241,7 @@
             toastr.success(message)
         })
     </script>
+    @livewireScripts
 
 </body>
 

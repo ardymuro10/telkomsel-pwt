@@ -14,65 +14,15 @@ use Carbon\Carbon;
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-6" style="text-align: center">
-            <div class="small-box">
-                <div class="inner">
-                    <a type="submit" wire:click="addAction">
-                        <h4><b>Upload</b></h4>
-                        <img src="{{ asset('img/upload.png') }}" height="150">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-6" style="text-align: center">
-            <div class="small-box">
-                <div class="inner">
-                    <a type="submit">
-                        <h4><b>Download</b></h4>
-                        <img src="{{ asset('img/download.png') }}" height="150">
-                    </a>
-                </div>
+    <div class="card">
+        <div class="col-12">
+            <div>
+                <livewire:data.import/>
             </div>
         </div>
     </div>
-
-    <div class="modal fade" id="up-excel" tabindex="-1" role="dialog" aria-labelledby="up-excel-label" aria-hidden="true" wire:ignore.self>
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title font-weight-bold" id="up-excel-label">{{ $form_mode[$mode]['text'] }} Data</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form wire:submit.prevent="{{ $form_mode[$mode]['action'] }}({{ $upex['id'] ?? null }})">
-                    <div class="modal-body">
-                        <div class="container">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label" for="upex-up">Upload file excel</label>
-                                    <input class="form-control" type="file" id="upex-up">
-                                    <div>
-                                        <small class="font-weight-bold" style="font-style: italic">Format xxxxx</small>
-                                    </div>
-                                    <div>
-                                        <button type="submit" class="btn btn-info">Contoh</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-                        <button type="submit" class="btn btn-primary">Simpan</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
 </div>
+
 
 {{-- <div class="row" wire:poll="checkData">
     <meta http-equiv="refresh" content="3" >

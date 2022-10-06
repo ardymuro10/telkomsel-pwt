@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ContohController;
+use App\Http\Controllers\Controller;
 use App\Models\Certificate;
 use App\Models\CoverLetter;
 use App\Models\DifferentData;
@@ -86,6 +88,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/demografi', App\Http\Livewire\Data\Data6\Index::class)->name('demografi');
         Route::get('/sales', App\Http\Livewire\Data\Data7\Index::class)->name('sales');
     });
+    Route::get('/contoh', [ContohController::class, 'contoh'])->name('contoh');
 });
 
 
