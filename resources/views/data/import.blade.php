@@ -3,14 +3,14 @@
 
     <form wire:submit.prevent="submit">
         <div class="card">
-            <div class="card-header">
+            {{-- <div class="card-header">
                 <h4 class="h4" id="">Import file</h4>
-            </div>
+            </div> --}}
             <div class="card-body">
                 <div class="mb-3">
                     <label class="form-label">File Excel</label>
                     <input type="file" class="form-control @error('file') is-invalid @enderror" wire:model="file">
-                    <small style="font-style: italic">Format file harus .xlsx .xls</small>
+                    <small style="font-style: italic"><b class="text-danger">*</b> format file harus .xlsx .xls</small>
                     @error('file')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

@@ -23,7 +23,7 @@ class Datatable extends DataTableComponent
     public function configure(): void
     {
         $this->setPrimaryKey('id');
-        $this->setDefaultSort('id');
+        $this->setDefaultSort('id', 'desc');
         $this->setColumnSelectStatus(true);
         $this->setTheadAttributes([
             'class' => 'text-nowrap',
