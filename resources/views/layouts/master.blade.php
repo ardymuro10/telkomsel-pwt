@@ -120,10 +120,10 @@
                                 <p>Daftar Pengguna</p>
                             </a>
                         </li> --}}
-                        <li class="nav-item {{ Route::is('data.monitoring') || Route::is('data.data1') || Route::is('data.data2') || Route::is('data.eqp') || Route::is('data.tower') || Route::is('data.review') || Route::is('data.demografi') || Route::is('data.sales') ? 'menu-open' : null }}">
-                            <a href="#" class="nav-link {{ Route::is('data.monitoring') || Route::is('data.data1') || Route::is('data.data2') || Route::is('data.eqp') || Route::is('data.tower') || Route::is('data.review') || Route::is('data.demografi') || Route::is('data.sales') ? 'active' : null }}">
+                        <li class="nav-item {{ Route::is('data.import') || Route::is('data.monitoring') || Route::is('data.data1') || Route::is('data.data2') || Route::is('data.eqp') || Route::is('data.tower') || Route::is('data.review') || Route::is('data.demografi') || Route::is('data.sales') ? 'menu-open' : null }}">
+                            <a href="#" class="nav-link {{ Route::is('data.import') || Route::is('data.monitoring') || Route::is('data.data1') || Route::is('data.data2') || Route::is('data.eqp') || Route::is('data.tower') || Route::is('data.review') || Route::is('data.demografi') || Route::is('data.sales') ? 'active' : null }}">
                                 <i class="nav-icon fas fa-folder"></i>
-                                <p>Data<i class="right fas fa-angle-left"></i></p>
+                                <p>Program JPP<i class="right fas fa-angle-left"></i></p>
                             </a>
                             <ul class="nav nav-treeview">
                                 {{-- <li class="nav-item">
@@ -173,6 +173,13 @@
                                 <a href="{{ route('monitoring') }}" class="nav-link {{ Route::is('monitoring') ? 'active' : null }}">
                                     <i class="nav-icon fas fa-pen-square"></i>
                                     <p>Monitoring</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('import') }}" class="nav-link {{ Route::is('import') ? 'active' : null }}">
+                                    <i class="nav-icon fas fa-file-upload"></i>
+                                    {{-- <i class="fas fa-file-download"></i> --}}
+                                    <p>Import</p>
                                 </a>
                             </li>
                         </li>

@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Data\Monitoring;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 use App\Models\Monitoring;
+use Illuminate\Support\Str;
 
 class Datatable extends DataTableComponent
 {
@@ -13,6 +14,11 @@ class Datatable extends DataTableComponent
     protected $listeners = [
         'refresh-table' => 'refresh'
     ];
+
+    public function refresh()
+    {
+        //
+    }
 
     public function configure(): void
     {
@@ -44,16 +50,32 @@ class Datatable extends DataTableComponent
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Status", "status")
+            Column::make("Type Infra", "type_infra")
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet()
+                ->format(function($value, $row, Column $column) {
+                    return Str::title($value);
+                }),
+            Column::make("Owner Infra", "owner_infra")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
+            Column::make("Status", "status")
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet()
+                ->format(function($value, $row, Column $column) {
+                    return Str::title($value);
+                }),
             Column::make("Vendor", "vendor")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
             Column::make("Last Update", "updated_at")
-                ->sortable(),
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet(),
             Column::make('Opsi', 'id')
                 ->format(function($value, $row, Column $column) {
                     return view('components.datatable.action', [

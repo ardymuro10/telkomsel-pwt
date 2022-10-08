@@ -5,22 +5,45 @@ use Carbon\Carbon;
     <x-flash-message/>
 
     <div class="row">
-        <div class="col-3">
-            <div class="small-box">
+
+        <div class="col-6">
+            <div class="small-box bg-primary">
                 <div class="inner">
-                    <h4>Total Data : {{ $totalData }}</h4>
+                    <h4 class="font-weight-bold card-header">Monitoring Site Id</h4>
+                    <div class="row" style="margin: 8px">
+                        <div class="small-box col-5 bg-light" style="margin: auto">
+                            <div class="inner">
+                                <h5>Status</h5>
+                                <h6>&emsp;Open : {{ $countOpen }}</h6>
+                                <h6>&emsp;On Progres : {{ $countOgp }}</h6>
+                                <h6>&emsp;Close : {{ $countClose }}</h6>
+                            </div>
+                        </div>
+                        <div class="small-box col-5 bg-light" style="margin: auto">
+                            <div class="inner">
+                                <h5>Infra Type</h5>
+                                <h6>&emsp;Open : {{ $countOpen }}</h6>
+                                <h6>&emsp;On Progres : {{ $countOgp }}</h6>
+                                <h6>&emsp;Close : {{ $countClose }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="card-body">Total Data : {{ $totalDataMonitoring }}</h5>
+                </div>
+                <a href="{{ route('monitoring') }}" class="small-box-footer bg-primary">Lihat Data <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="small-box bg-primary">
+                <div class="inner">
+                    <h4 class="font-weight-bold card-header">Data Program JPP</h4>
+                    <h5 class="card-body">Total Data : {{ $totalData }}</h5>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="card">
-        <div class="col-12">
-            <div>
-                <livewire:data.import/>
-            </div>
-        </div>
-    </div>
 </div>
 
 

@@ -21,6 +21,18 @@ class Index extends Component
     {
         $totalData = DB::select('SELECT count(*) AS Total From (SELECT id FROM data2s) data');
         $this->totalData = $totalData[0] ? $totalData[0]->Total : 0;
+
+        $countOpen = DB::select('SELECT count(*) AS Open FROM (SELECT status FROM monitorings WHERE status = "open") data');
+        $this->countOpen = $countOpen[0] ? $countOpen[0]->Open : 0;
+
+        $countOgp = DB::select('SELECT count(*) AS Ogp FROM (SELECT status FROM monitorings WHERE status = "on progres") data');
+        $this->countOgp = $countOgp[0] ? $countOgp[0]->Ogp : 0;
+
+        $countClose = DB::select('SELECT count(*) AS Close FROM (SELECT status FROM monitorings WHERE status = "close") data');
+        $this->countClose = $countClose[0] ? $countClose[0]->Close : 0;
+
+        $totalDataMonitoring = DB::select('SELECT count(*) AS Total From (SELECT id FROM monitorings) data');
+        $this->totalDataMonitoring = $totalDataMonitoring[0] ? $totalDataMonitoring[0]->Total : 0;
     }
 
     public function render()

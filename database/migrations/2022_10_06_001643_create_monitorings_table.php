@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('site_id')->nullable();
             $table->string('list_program')->nullable();
+            $table->string('type_infra')->nullable();
+            $table->string('owner_infra')->nullable();
             $table->string('status')->nullable();
             $table->string('vendor')->nullable();
             $table->timestamps();

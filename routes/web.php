@@ -79,6 +79,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/public-complaints', App\Http\Livewire\PublicComplaint\Index::class)->name('public-complaints');
     Route::get('/user-list', App\Http\Livewire\UserList\Index::class)->name('user-list');
     Route::get('/monitoring', App\Http\Livewire\Data\Monitoring\Index::class)->name('monitoring');
+    Route::get('/import', App\Http\Livewire\Data\Import::class)->name('import');
     Route::name('data.')->prefix('/data')->group(function () {
         Route::get('/data1', App\Http\Livewire\Data\Data1\Index::class)->name('data1');
         Route::get('/data2', App\Http\Livewire\Data\Data2\Index::class)->name('data2');
