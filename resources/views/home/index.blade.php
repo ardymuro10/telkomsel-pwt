@@ -9,22 +9,60 @@ use Carbon\Carbon;
         <div class="col-6">
             <div class="small-box bg-primary">
                 <div class="inner">
+                    <h4 class="font-weight-bold card-header">Data Program JPP</h4>
+                    <h5 class="card-body">Total Data : {{ $totalData }}</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="small-box bg-primary">
+                <div class="inner">
                     <h4 class="font-weight-bold card-header">Monitoring Site Id</h4>
                     <div class="row" style="margin: 8px">
-                        <div class="small-box col-5 bg-light" style="margin: auto">
+                        <div class="small-box col-3 bg-light" style="margin: inherit">
                             <div class="inner">
-                                <h5>Status</h5>
-                                <h6>&emsp;Open : {{ $countOpen }}</h6>
-                                <h6>&emsp;On Progres : {{ $countOgp }}</h6>
-                                <h6>&emsp;Close : {{ $countClose }}</h6>
+                                <h5 class="font-weight-bold">Status</h5>
+                                <h6><i class="fas fa-circle" style="color: yellow"></i> Open : {{ $countOpen }}</h6>
+                                <h6><i class="fas fa-circle" style="color: #1E90FF"></i> On Progres : {{ $countOgp }}</h6>
+                                <h6><i class="fas fa-circle" style="color:#32CD32"></i> Close : {{ $countClose }}</h6>
                             </div>
                         </div>
-                        <div class="small-box col-5 bg-light" style="margin: auto">
+                        <div class="small-box col-8 bg-light" style="margin: inherit">
                             <div class="inner">
-                                <h5>Infra Type</h5>
-                                <h6>&emsp;Open : {{ $countOpen }}</h6>
-                                <h6>&emsp;On Progres : {{ $countOgp }}</h6>
-                                <h6>&emsp;Close : {{ $countClose }}</h6>
+                                <table class="table table-bordered" style="margin: inherit">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" rowspan="2" class="align-middle border-dark" style="text-align: center">Type Infra</th>
+                                            <th scope="col" colspan="3" style="text-align: center" class="border-dark">Status</th>
+                                        </tr>
+                                        <tr style="text-align: center">
+                                            <th scope="col" class="border-dark bg-info">Open</th>
+                                            <th scope="col" class="border-dark bg-primary">OGP</th>
+                                            <th scope="col" class="border-dark bg-success">Close</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th class="border-dark" scope="row">Easy Pole</th>
+                                            <td class="border-dark">{{$countEasyOpen}}</td>
+                                            <td class="border-dark">{{$countEasyOgp}}</td>
+                                            <td class="border-dark">{{$countEasyclose}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="border-dark" scope="row">Black Site</th>
+                                            <td class="border-dark">{{$countBlackopen}}</td>
+                                            <td class="border-dark">{{$countBlackogp}}</td>
+                                            <td class="border-dark">{{$countBlackclose}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="border-dark" scope="row">Repeater</th>
+                                            <td class="border-dark">{{$countRepeatopen}}</td>
+                                            <td class="border-dark">{{$countRepeatogp}}</td>
+                                            <td class="border-dark">{{$countRepeatclose}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -34,14 +72,6 @@ use Carbon\Carbon;
             </div>
         </div>
 
-        <div class="col-6">
-            <div class="small-box bg-primary">
-                <div class="inner">
-                    <h4 class="font-weight-bold card-header">Data Program JPP</h4>
-                    <h5 class="card-body">Total Data : {{ $totalData }}</h5>
-                </div>
-            </div>
-        </div>
     </div>
 
 </div>

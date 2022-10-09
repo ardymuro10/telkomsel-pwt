@@ -66,7 +66,7 @@
                                         <option value="black site">{{ Str::title('black site') }}</option>
                                         <option value="repeater">{{ Str::title('repeater') }}</option>
                                     </select>
-                                        @error('monitoring.type_infra')
+                                    @error('monitoring.type_infra')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>

@@ -177,9 +177,9 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('import') }}" class="nav-link {{ Route::is('import') ? 'active' : null }}">
-                                    <i class="nav-icon fas fa-file-upload"></i>
+                                    <i class="nav-icon fas fa-file-alt"></i>
                                     {{-- <i class="fas fa-file-download"></i> --}}
-                                    <p>Import</p>
+                                    <p>Import & Export</p>
                                 </a>
                             </li>
                         </li>

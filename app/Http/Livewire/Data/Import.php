@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Data;
 
 use App\Imports\Data2Import;
+use App\Exports\Data2Export;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Maatwebsite\Excel\Facades\Excel;
@@ -12,6 +13,11 @@ class Import extends Component
 {
     use WithFileUploads;
     public $file;
+
+    public function export()
+    {
+        return Excel::download(new Data2Export, 'data-program-jpp.xlsx');
+    }
 
     public function submit()
     {
