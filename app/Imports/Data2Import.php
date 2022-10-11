@@ -82,6 +82,61 @@ class Data2Import implements ToModel, WithHeadingRow
             'rank_rtpe' => $row['rank_rtpe'],
             'prior_finreg' => $row['priority_final_regional'],
 
+            //powertrans
+            'pre_surveipot' => $row[''],
+            'pln' => $row[''],
+            'ass_los' => $row[''],
+            'siteid_farend' => $row[''],
+            'configfe' => $row[''],
+            'min_los' => $row[''],
+            'simple_trans' => $row[''],
+
+            //drm
+            'ur_kandidat' => $row[''],
+            'lat_kandidat' => $row[''],
+            'lon_kandidat' => $row[''],
+            'dist_tonom' => $row[''],
+            'sa_potcomm' => $row[''],
+            'prop_rf' => $row[''], //
+            'alamat' => $row[''],
+            'azimuth' => $row[''],
+            'tipe_rf' => $row[''],
+            'tipe_rru' => $row[''],
+            'm_tilt' => $row[''],
+            'e_tilt' => $row[''],
+            'jum_sector' => $row[''], //
+            'siteid_fe' => $row[''],
+            'sitename_fe' => $row[''],
+            'lat_fe' => $row[''],
+            'lon_fe' => $row[''],
+            'tp' => $row[''],
+            'tower_hghtfe' => $row[''], //
+            'path' => $row[''],
+            'azimuth_ne' => $row[''],
+            'freq' => $row[''],
+            'diameter_antnefe' => $row[''],
+            'ant_nefe' => $row[''],
+            'min_losnefe' => $row[''],
+            'los_nlos' => $row[''],
+            'remark' => $row[''],
+            'tgl_drm' => $row[''],
+            'tgl_edrm' => $row[''],
+            'drm_stts' => $row[''],
+
+            //kom & report
+            'no_komkkst' => $row[''],
+            'tp_komkkst' => $row[''],
+            'tgl_kom' => $row[''],
+            'cp_eqp' => $row[''],
+            'pre_sales' => $row[''],
+            'aging' => $row[''],
+            'batch_final' => $row[''],
+            'prog_sim' => $row[''],
+            'need_supp' => $row[''],
+            'detail_prog' => $row[''],
+            'need_form' => $row[''],
+            'remark_rep' => $row[''],
+
         ]);
     }
 }

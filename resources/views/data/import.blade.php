@@ -19,10 +19,10 @@
                 </div>
             </div>
             <div class="card-footer">
-                <a href="{{route('contoh')}}" class="btn btn-info" style="margin-right: 15px">Contoh</a>
+                <a href="{{route('contoh')}}" class="btn btn-info" style="margin-right: 20px">Contoh</a>
                 {{-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> --}}
-                <button type="submit" class="btn btn-success" style="margin-right: 15px">Upload</button>
-                <button type="button" class="btn btn-warning" wire:click="export">Download</button>
+                <button type="submit" class="btn btn-success" style="margin-right: 20px">Upload</button>
+                <button type="button" class="btn btn-warning text-white" wire:click="export">Download</button>
             </div>
         </div>
     </form>

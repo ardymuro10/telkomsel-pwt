@@ -73,5 +73,60 @@ class Data2 extends Model
         'rank_reg',
         'rank_rtpe',
         'prior_finreg',
+
+        //powertrans
+        'pre_surveipot',
+        'pln',
+        'ass_los',
+        'siteid_farend',
+        'configfe',
+        'min_los',
+        'simple_trans',
+
+        //drm
+        'ur_kandidat',
+        'lat_kandidat',
+        'lon_kandidat',
+        'dist_tonom',
+        'sa_potcomm',
+        'prop_rf', //
+        'alamat',
+        'azimuth',
+        'tipe_rf',
+        'tipe_rru',
+        'm_tilt',
+        'e_tilt',
+        'jum_sector', //
+        'siteid_fe',
+        'sitename_fe',
+        'lat_fe',
+        'lon_fe',
+        'tp',
+        'tower_hghtfe', //
+        'path',
+        'azimuth_ne',
+        'freq',
+        'diameter_antnefe',
+        'ant_nefe',
+        'min_losnefe',
+        'los_nlos',
+        'remark',
+        'tgl_drm',
+        'tgl_edrm',
+        'drm_stts',
+
+        //kom & report
+        'no_komkkst',
+        'tp_komkkst',
+        'tgl_kom',
+        'cp_eqp',
+        'pre_sales',
+        'aging',
+        'batch_final',
+        'prog_sim',
+        'need_supp',
+        'detail_prog',
+        'need_form',
+        'remark_rep',
     ];
 }

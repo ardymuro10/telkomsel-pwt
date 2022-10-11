@@ -120,8 +120,8 @@
                                 <p>Daftar Pengguna</p>
                             </a>
                         </li> --}}
-                        <li class="nav-item {{ Route::is('data.import') || Route::is('data.monitoring') || Route::is('data.data1') || Route::is('data.data2') || Route::is('data.eqp') || Route::is('data.tower') || Route::is('data.review') || Route::is('data.demografi') || Route::is('data.sales') ? 'menu-open' : null }}">
-                            <a href="#" class="nav-link {{ Route::is('data.import') || Route::is('data.monitoring') || Route::is('data.data1') || Route::is('data.data2') || Route::is('data.eqp') || Route::is('data.tower') || Route::is('data.review') || Route::is('data.demografi') || Route::is('data.sales') ? 'active' : null }}">
+                        <li class="nav-item {{ Route::is('data.import') || Route::is('data.monitoring') || Route::is('data.data1') || Route::is('data.data2') || Route::is('data.eqp') || Route::is('data.tower') || Route::is('data.review') || Route::is('data.demografi') || Route::is('data.sales') || Route::is('data.powertrans') || Route::is('data.drm') || Route::is('data.komreport') ? 'menu-open' : null }}">
+                            <a href="#" class="nav-link {{ Route::is('data.import') || Route::is('data.monitoring') || Route::is('data.data1') || Route::is('data.data2') || Route::is('data.eqp') || Route::is('data.tower') || Route::is('data.review') || Route::is('data.demografi') || Route::is('data.sales') || Route::is('data.powertrans') || Route::is('data.drm') || Route::is('data.komreport') ? 'active' : null }}">
                                 <i class="nav-icon fas fa-folder"></i>
                                 <p>Program JPP<i class="right fas fa-angle-left"></i></p>
                             </a>
@@ -166,6 +166,24 @@
                                     <a href="{{ route('data.sales') }}" class="nav-link {{ Route::is('data.sales') ? 'active' : null }}">
                                         <i class="far fa-circle nav-icon text-primary"></i>
                                         <p>Sales</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('data.powertrans') }}" class="nav-link {{ Route::is('data.powertrans') ? 'active' : null }}">
+                                        <i class="far fa-circle nav-icon text-primary"></i>
+                                        <p>Power & Transport</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('data.drm') }}" class="nav-link {{ Route::is('data.drm') ? 'active' : null }}">
+                                        <i class="far fa-circle nav-icon text-primary"></i>
+                                        <p>DRM</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('data.komreport') }}" class="nav-link {{ Route::is('data.komreport') ? 'active' : null }}">
+                                        <i class="far fa-circle nav-icon text-primary"></i>
+                                        <p>KOM/KKST & Report</p>
                                     </a>
                                 </li>
                             </ul>

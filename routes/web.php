@@ -88,6 +88,9 @@ Route::middleware('auth')->group(function () {
         Route::get('/review', App\Http\Livewire\Data\Data5\Index::class)->name('review');
         Route::get('/demografi', App\Http\Livewire\Data\Data6\Index::class)->name('demografi');
         Route::get('/sales', App\Http\Livewire\Data\Data7\Index::class)->name('sales');
+        Route::get('/powertrans', App\Http\Livewire\Data\Data8\Index::class)->name('powertrans');
+        Route::get('/drm', App\Http\Livewire\Data\Data9\Index::class)->name('drm');
+        Route::get('/komreport', App\Http\Livewire\Data\Data10\Index::class)->name('komreport');
     });
     Route::get('/contoh', [ContohController::class, 'contoh'])->name('contoh');
 });
