@@ -14,13 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/public-complaint', [App\Http\Controllers\ApiController::class, 'publicComplaint']);
-Route::post('/certificate', [App\Http\Controllers\ApiController::class, 'certificate']);
-Route::post('/cover-letter', [App\Http\Controllers\ApiController::class, 'coverLetter']);
-Route::post('/different-data', [App\Http\Controllers\ApiController::class, 'differentData']);
-Route::post('/mail-poor', [App\Http\Controllers\ApiController::class, 'mailPoor']);
-Route::post('/business-info', [App\Http\Controllers\ApiController::class, 'businessInfo']);
-Route::post('/user-list', [App\Http\Controllers\ApiController::class, 'userList']);
 
 Route::any('{any}', function(){
     $response['code'] = 404;

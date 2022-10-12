@@ -36,7 +36,7 @@ class Import extends Component
     {
         return view('data.import')
         ->layoutData([
-            'title' => 'Import'
+            'title' => 'Import & Export File'
         ]);;
     }
 }

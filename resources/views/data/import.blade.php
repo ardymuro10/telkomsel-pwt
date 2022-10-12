@@ -22,7 +22,17 @@
                 <a href="{{route('contoh')}}" class="btn btn-info" style="margin-right: 20px">Contoh</a>
                 {{-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> --}}
                 <button type="submit" class="btn btn-success" style="margin-right: 20px">Upload</button>
-                <button type="button" class="btn btn-warning text-white" wire:click="export">Download</button>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label">Export File</label>
+                    <div>
+                        <button type="button" class="btn btn-warning text-white" wire:click="export">Download</button>
+                    </div>
+                    <div>
+                        <small style="font-style: italic"><b class="text-danger">*</b> file terdownload dengan format .xlsx</small>
+                    </div>
+                </div>
             </div>
         </div>
     </form>
