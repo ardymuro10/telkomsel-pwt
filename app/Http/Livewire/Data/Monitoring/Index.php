@@ -41,9 +41,9 @@ class Index extends Component
     protected $rules = [
         'monitoring.site_id' => ['required', 'string', 'max:255'],
         'monitoring.list_program' => ['required', 'string', 'max:255'],
-        'monitoring.type_infra' => ['required', 'string', 'in:easy pole,black site,repeater'],
+        'monitoring.type_infra' => ['required', 'string', 'in:infra combat,easy pole,black site,repeater'],
         'monitoring.owner_infra' => ['required', 'string', 'max:255'],
-        'monitoring.status' => ['required', 'string', 'in:open,on progres,close'],
+        'monitoring.status' => ['required', 'string', 'in:have program,usulan,on progres,not have program,closed'],
         'monitoring.vendor' => ['required', 'string', 'max:255'],
     ];
 

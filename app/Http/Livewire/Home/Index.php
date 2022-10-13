@@ -70,6 +70,26 @@ class Index extends Component
         AND status = "close")) data');
         $this->countRepeatclose = $countRepeatclose[0] ? $countRepeatclose[0]->Repeatclose : 0;
 
+        $totalEasypole = DB::select('SELECT count(*) AS Totaleasy FROM (SELECT type_infra FROM monitorings WHERE type_infra = "easy pole") data');
+        $this->totalEasypole = $totalEasypole[0] ? $totalEasypole[0]->Totaleasy : 0;
+
+        $totalBlacksite = DB::select('SELECT count(*) AS Totalblack FROM (SELECT type_infra FROM monitorings WHERE type_infra = "black site") data');
+        $this->totalBlacksite = $totalBlacksite[0] ? $totalBlacksite[0]->Totalblack : 0;
+
+        $totalRepeater = DB::select('SELECT count(*) AS TotalRepeat FROM (SELECT type_infra FROM monitorings WHERE type_infra = "repeater") data');
+        $this->totalRepeater = $totalRepeater[0] ? $totalRepeater[0]->TotalRepeat : 0;
+
+        $countCombat = DB::select('SELECT count(*) AS Combat FROM (SELECT type_infra FROM monitorings WHERE type_infra = "infra combat") data');
+        $this->countCombat = $countCombat[0] ? $countCombat[0]->Combat : 0;
+
+        $countCombathave = DB::select('SELECT count(*) AS Combathave FROM (SELECT type_infra FROM monitorings WHERE (type_infra = "infra combat"
+        AND status = "have program")) data');
+        $this->countCombathave = $countCombathave[0] ? $countCombathave[0]->Combathave : 0;
+
+        $countEasyhave = DB::select('SELECT count(*) AS Easyhave FROM (SELECT type_infra FROM monitorings WHERE (type_infra = "easy pole"
+        AND status = "have program")) data');
+        $this->countEasyhave = $countEasyhave[0] ? $countEasyhave[0]->Easyhave : 0;
+
     }
 
     public function render()

@@ -6,16 +6,46 @@ use Carbon\Carbon;
 
     <div class="row">
 
-        <div class="col-6">
+        <div class="col-6 col-md-6">
             <div class="small-box bg-primary">
-                <div class="inner">
-                    <h4 class="font-weight-bold card-header">Data Program JPP</h4>
-                    <h5 class="card-body">Total Data : {{ $totalData }}</h5>
+                <div class="inner" style="text-align: center">
+                    <h4 class="font-weight-bold card-header">JPP 2023</h4>
+                    <h5 class="card-body">{{ $totalData }} Titik</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-6">
+            <div class="small-box bg-primary">
+                <div class="inner" style="text-align: center">
+                    <h4 class="font-weight-bold card-header">Gagal Perpanjangan/BTF</h4>
+                    <h5 class="card-body">Total : {{ $totalData }}</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-6">
+            <div class="small-box bg-primary">
+                <div class="inner" style="text-align: center">
+                    <h4 class="font-weight-bold card-header">Infra Combat</h4>
+                    <div class="card-body">
+                        <h5>Total : {{ $countCombat }}</h5>
+                        <h5>Have Program : {{ $countCombathave }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-6">
+            <div class="small-box bg-primary">
+                <div class="inner" style="text-align: center">
+                    <h4 class="font-weight-bold card-header">Easy Pole</h4>
+                    <div class="card-body">
+                        <h5>Total : {{ $totalEasypole }}</h5>
+                        <h5>Have Program : {{ $countEasyhave }}</h5>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-12">
+        {{-- <div class="col-12">
             <div class="small-box bg-primary">
                 <div class="inner">
                     <h4 class="font-weight-bold card-header">Monitoring Site Id</h4>
@@ -34,12 +64,13 @@ use Carbon\Carbon;
                                     <thead>
                                         <tr>
                                             <th scope="col" rowspan="2" class="align-middle border-dark" style="text-align: center">Type Infra</th>
-                                            <th scope="col" colspan="3" style="text-align: center" class="border-dark">Status</th>
+                                            <th scope="col" colspan="4" style="text-align: center" class="border-dark">Status</th>
                                         </tr>
                                         <tr style="text-align: center">
                                             <th scope="col" class="border-dark bg-info">Open</th>
                                             <th scope="col" class="border-dark bg-primary">OGP</th>
                                             <th scope="col" class="border-dark bg-success">Close</th>
+                                            <th scope="col" class="border-dark bg-secondary">Total</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -48,18 +79,21 @@ use Carbon\Carbon;
                                             <td class="border-dark">{{$countEasyOpen}}</td>
                                             <td class="border-dark">{{$countEasyOgp}}</td>
                                             <td class="border-dark">{{$countEasyclose}}</td>
+                                            <td class="border-dark">{{$totalEasypole}}</td>
                                         </tr>
                                         <tr>
                                             <th class="border-dark" scope="row">Black Site</th>
                                             <td class="border-dark">{{$countBlackopen}}</td>
                                             <td class="border-dark">{{$countBlackogp}}</td>
                                             <td class="border-dark">{{$countBlackclose}}</td>
+                                            <td class="border-dark">{{$totalBlacksite}}</td>
                                         </tr>
                                         <tr>
                                             <th class="border-dark" scope="row">Repeater</th>
                                             <td class="border-dark">{{$countRepeatopen}}</td>
                                             <td class="border-dark">{{$countRepeatogp}}</td>
                                             <td class="border-dark">{{$countRepeatclose}}</td>
+                                            <td class="border-dark">{{$totalRepeater}}</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -70,7 +104,7 @@ use Carbon\Carbon;
                 </div>
                 <a href="{{ route('monitoring') }}" class="small-box-footer bg-primary">Lihat Data <i class="fas fa-arrow-circle-right"></i></a>
             </div>
-        </div>
+        </div> --}}
 
     </div>
 

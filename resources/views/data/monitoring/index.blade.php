@@ -62,6 +62,7 @@
                                     <label for="monitoring-type-infra">Type Infra</label>
                                     <select class="form-control @error('monitoring.type_infra') is-invalid @enderror" id="monitoring-type-infra" wire:model.defer="monitoring.type_infra">
                                         <option value="">Pilih</option>
+                                        <option value="infra combat">{{ Str::title('infra combat') }}</option>
                                         <option value="easy pole">{{ Str::title('easy pole') }}</option>
                                         <option value="black site">{{ Str::title('black site') }}</option>
                                         <option value="repeater">{{ Str::title('repeater') }}</option>
@@ -87,9 +88,11 @@
                                     <label for="monitoring-status">Status</label>
                                     <select class="form-control @error('monitoring.status') is-invalid @enderror" id="monitoring-status" wire:model.defer="monitoring.status">
                                         <option value="">Pilih</option>
-                                        <option value="open">{{ Str::title('open') }}</option>
+                                        <option value="have program">{{ Str::title('have program') }}</option>
+                                        <option value="usulan">{{ Str::title('usulan') }}</option>
                                         <option value="on progres">{{ Str::title('on progres') }}</option>
-                                        <option value="close">{{ Str::title('close') }}</option>
+                                        <option value="not have program">{{ Str::title('not have program') }}</option>
+                                        <option value="closed">{{ Str::title('closed') }}</option>
                                     </select>
                                     @error('monitoring.status')
                                         <span class="invalid-feedback" role="alert">
