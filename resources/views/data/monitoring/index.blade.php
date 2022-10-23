@@ -46,10 +46,15 @@
                 <form wire:submit.prevent="{{ $form_mode[$mode]['action'] }}({{ $monitoring['id'] ?? null }})">
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="monitoring-site-id">Site Id</label>
-                                    <input type="text" class="form-control @error('monitoring.site_id') is-invalid @enderror" id="monitoring-site-id" placeholder="Site Id" wire:model.defer="monitoring.site_id">
+                                    <select class="form-control @error('monitoring.site_id') is-invalid @enderror" id="monitoring-site-id" wire:model.defer="monitoring.site_id">
+                                        <option value="">Pilih</option>
+                                        @foreach ($data2 as $item)
+                                            <option value="{{ $item->id_site }}">{{ Str::title($item->id_site) }}</option>
+                                        @endforeach
+                                    </select>
                                     @error('monitoring.site_id')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -59,14 +64,24 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="monitoring-type-infra">Type Infra</label>
-                                    <select class="form-control @error('monitoring.type_infra') is-invalid @enderror" id="monitoring-type-infra" wire:model.defer="monitoring.type_infra">
+                                    <label for="monitoring-site-name">Site Name</label>
+                                    <select class="form-control @error('monitoring.site_name') is-invalid @enderror" id="monitoring-site-name" wire:model.defer="monitoring.site_name">
                                         <option value="">Pilih</option>
-                                        <option value="infra combat">{{ Str::title('infra combat') }}</option>
-                                        <option value="easy pole">{{ Str::title('easy pole') }}</option>
-                                        <option value="black site">{{ Str::title('black site') }}</option>
-                                        <option value="repeater">{{ Str::title('repeater') }}</option>
+                                        @foreach ($data2 as $item)
+                                            <option value="{{ $item->site_name }}">{{ Str::title($item->site_name) }}</option>
+                                        @endforeach
                                     </select>
+                                    @error('monitoring.site_name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="monitoring-type-infra">Infra Type</label>
+                                    <input type="text" class="form-control @error('monitoring.type_infra') is-invalid @enderror" id="monitoring-type-infra" placeholder="Infra Type" wire:model.defer="monitoring.type_infra">
                                     @error('monitoring.type_infra')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -77,6 +92,15 @@
                                     <label for="monitoring-owner-infra">Owner Infra</label>
                                     <input type="text" class="form-control @error('monitoring.owner_infra') is-invalid @enderror" id="monitoring-owner-infra" placeholder="Owner Infra" wire:model.defer="monitoring.owner_infra">
                                     @error('monitoring.owner_infra')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for="monitoring-issue">Issue</label>
+                                    <input type="text" class="form-control @error('monitoring.issue') is-invalid @enderror" id="monitoring-issue" placeholder="Issue" wire:model.defer="monitoring.issue">
+                                    @error('monitoring.issue')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>

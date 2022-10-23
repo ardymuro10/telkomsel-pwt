@@ -34,6 +34,7 @@ class Data2Import implements ToModel, WithHeadingRow
             'remark_jpp' => $row['remark_jpp'],
 
             //tower
+            'sow_infra' => $row['sow_infra'],
             'infra_type' => $row['infra_type'],
             'site_id_tp' => $row['site_id_tp'],
             'plan_tower_prov' => $row['plan_tower_provider'],

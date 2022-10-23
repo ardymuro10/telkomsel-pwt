@@ -37,6 +37,7 @@ class Data2Export implements FromCollection, WithHeadings
             'Remark JPP',
 
             //tower
+            'SOW Infra',
             'Infra Type',
             'Site Id TP',
             'Plan Tower Provider',

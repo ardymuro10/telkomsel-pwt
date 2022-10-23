@@ -34,7 +34,7 @@ class Index extends Component
     {
         return view('data.data10.index')
         ->layoutData([
-            'title' => ' KOM/KKST & Report',
+            'title' => 'KOM/KKST & Report',
         ]);
     }
 

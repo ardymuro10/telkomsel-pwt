@@ -120,8 +120,8 @@
                                 <p>Daftar Pengguna</p>
                             </a>
                         </li> --}}
-                        <li class="nav-item {{ Route::is('data.import') || Route::is('data.monitoring') || Route::is('data.data1') || Route::is('data.data2') || Route::is('data.eqp') || Route::is('data.tower') || Route::is('data.review') || Route::is('data.demografi') || Route::is('data.sales') || Route::is('data.powertrans') || Route::is('data.drm') || Route::is('data.komreport') ? 'menu-open' : null }}">
-                            <a href="#" class="nav-link {{ Route::is('data.import') || Route::is('data.monitoring') || Route::is('data.data1') || Route::is('data.data2') || Route::is('data.eqp') || Route::is('data.tower') || Route::is('data.review') || Route::is('data.demografi') || Route::is('data.sales') || Route::is('data.powertrans') || Route::is('data.drm') || Route::is('data.komreport') ? 'active' : null }}">
+                        <li class="nav-item {{ Route::is('data.easypole') || Route::is('data.import') || Route::is('data.monitoring') || Route::is('data.data1') || Route::is('data.data2') || Route::is('data.eqp') || Route::is('data.tower') || Route::is('data.review') || Route::is('data.demografi') || Route::is('data.sales') || Route::is('data.powertrans') || Route::is('data.drm') || Route::is('data.komreport') ? 'menu-open' : null }}">
+                            <a href="#" class="nav-link {{ Route::is('data.easypole') || Route::is('data.import') || Route::is('data.monitoring') || Route::is('data.data1') || Route::is('data.data2') || Route::is('data.eqp') || Route::is('data.tower') || Route::is('data.review') || Route::is('data.demografi') || Route::is('data.sales') || Route::is('data.powertrans') || Route::is('data.drm') || Route::is('data.komreport') ? 'active' : null }}">
                                 <i class="nav-icon fas fa-folder"></i>
                                 <p>Program JPP<i class="right fas fa-angle-left"></i></p>
                             </a>
@@ -198,6 +198,13 @@
                                     <i class="nav-icon fas fa-file-alt"></i>
                                     {{-- <i class="fas fa-file-download"></i> --}}
                                     <p>Import & Export</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('easypole') }}" class="nav-link {{ Route::is('easypole') ? 'active' : null }}">
+                                    <i class="nav-icon fas fa-book"></i>
+                                    {{-- <i class="fas fa-file-download"></i> --}}
+                                    <p>Easy Pole Proposal</p>
                                 </a>
                             </li>
                         </li>

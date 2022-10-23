@@ -26,6 +26,7 @@ class Data2 extends Model
         'remark_jpp',
 
         //tower
+        'sow_infra',
         'infra_type',
         'site_id_tp',
         'plan_tower_prov',

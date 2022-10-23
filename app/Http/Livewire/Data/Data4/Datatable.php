@@ -6,6 +6,7 @@ use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 use App\Models\Data4;
 use App\Models\Data2;
+use Illuminate\Support\Str;
 
 class Datatable extends DataTableComponent
 {
@@ -58,6 +59,13 @@ class Datatable extends DataTableComponent
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
+            Column::make("SOW Infra", "sow_infra")
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet()
+                ->format(function($value, $row, Column $column) {
+                    return Str::title($value);
+                }),
             Column::make("Infra Type", "infra_type")
                 ->sortable()
                 ->searchable()

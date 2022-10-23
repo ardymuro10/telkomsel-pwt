@@ -23,6 +23,7 @@ Auth::routes([
 Route::middleware('auth')->group(function () {
     Route::get('/', App\Http\Livewire\Home\Index::class)->name('home');
     Route::get('/monitoring', App\Http\Livewire\Data\Monitoring\Index::class)->name('monitoring');
+    Route::get('/easypole', App\Http\Livewire\Data\EasyPole\Index::class)->name('easypole');
     Route::get('/import', App\Http\Livewire\Data\Import::class)->name('import');
     Route::name('data.')->prefix('/data')->group(function () {
         Route::get('/data1', App\Http\Livewire\Data\Data1\Index::class)->name('data1');
@@ -37,5 +38,6 @@ Route::middleware('auth')->group(function () {
         Route::get('/komreport', App\Http\Livewire\Data\Data10\Index::class)->name('komreport');
     });
     Route::get('/contoh', [ContohController::class, 'contoh'])->name('contoh');
+    Route::get('/contoheasy', [ContohController::class, 'contoheasy'])->name('contoheasy');
 });
 

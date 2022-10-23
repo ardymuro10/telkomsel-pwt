@@ -45,18 +45,22 @@ class Datatable extends DataTableComponent
             Column::make("Site Id", "site_id")
                 ->sortable()
                 ->searchable()
+                ->collapseOnTablet()
+                ->format(function($value, $row, Column $column) {
+                    return Str::title($value);
+                }),
+            Column::make("Site Name", "site_name")
+                ->sortable()
+                ->searchable()
                 ->collapseOnTablet(),
             Column::make("List Program", "list_program")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Type Infra", "type_infra")
+            Column::make("Infra Type", "type_infra")
                 ->sortable()
                 ->searchable()
-                ->collapseOnTablet()
-                ->format(function($value, $row, Column $column) {
-                    return Str::title($value);
-                }),
+                ->collapseOnTablet(),
             Column::make("Owner Infra", "owner_infra")
                 ->sortable()
                 ->searchable()
@@ -68,6 +72,10 @@ class Datatable extends DataTableComponent
                 ->format(function($value, $row, Column $column) {
                     return Str::title($value);
                 }),
+            Column::make("Issue", "issue")
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet(),
             Column::make("Vendor", "vendor")
                 ->sortable()
                 ->searchable()

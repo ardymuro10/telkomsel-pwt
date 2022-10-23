@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Data\Monitoring;
 
 use Livewire\Component;
 use App\Models\Monitoring;
+use App\Models\Data2;
 
 class Index extends Component
 {
@@ -32,28 +33,33 @@ class Index extends Component
 
     public function render()
     {
-        return view('data.monitoring.index')
+        $data2 = Data2::all();
+        return view('data.monitoring.index', compact('data2'))
         ->layoutData([
             'title' => 'Monitoring',
         ]);
     }
 
     protected $rules = [
-        'monitoring.site_id' => ['required', 'string', 'max:255'],
+        'monitoring.site_id' => ['required'],
+        'monitoring.site_name' => ['required', 'string', 'max:255'],
         'monitoring.list_program' => ['required', 'string', 'max:255'],
-        'monitoring.type_infra' => ['required', 'string', 'in:infra combat,easy pole,black site,repeater'],
+        'monitoring.type_infra' => ['required', 'string', 'max:255'],
         'monitoring.owner_infra' => ['required', 'string', 'max:255'],
         'monitoring.status' => ['required', 'string', 'in:have program,usulan,on progres,not have program,closed'],
         'monitoring.vendor' => ['required', 'string', 'max:255'],
+        'monitoring.issue' => ['required', 'string', 'max:255'],
     ];
 
     protected $validationAttributes  = [
         'monitoring.site_id' => 'site id',
+        'monitoring.site_name' => 'site name',
         'monitoring.list_program' => 'list program',
         'monitoring.type_infra' => 'type infra',
         'monitoring.owner_infra' => 'owner infra',
         'monitoring.status' => 'status',
         'monitoring.vendor' => 'vendor',
+        'monitoring.issue' => 'issue',
     ];
 
     public function deleteAction(Monitoring $monitoring)

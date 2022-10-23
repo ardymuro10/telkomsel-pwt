@@ -33,6 +33,7 @@ return new class extends Migration
             // $table->text('cek_long');
 
             //tower
+            $table->string('sow_infra')->nullable();
             $table->string('infra_type')->nullable();
             $table->string('site_id_tp')->nullable();
             $table->string('plan_tower_prov')->nullable();

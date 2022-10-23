@@ -90,6 +90,21 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
+                                    <label for="data4-sow-infra">SOW Infra</label>
+                                    <select class="form-control @error('data4.sow_infra') is-invalid @enderror" id="data4-sow-infra" wire:model.defer="data4.sow_infra">
+                                        <option value="">Pilih</option>
+                                        <option value="b2s">{{ Str::title('b2s') }}</option>
+                                        <option value="collo tp">{{ Str::title('collo tp') }}</option>
+                                    </select>
+                                    @error('data4.sow_infra')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
                                     <label for="data4-infra-type">Infra Type</label>
                                     <input type="text" class="form-control @error('data4.infra_type') is-invalid @enderror" id="data4-infra-type" placeholder="Infra Type" wire:model.defer="data4.infra_type">
                                     @error('data4.infra_type')
@@ -99,7 +114,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="data4-site-id-tp">Site Id TP</label>
                                     <input type="text" class="form-control @error('data4.site_id_tp') is-invalid @enderror" id="data4-site-id-tp" placeholder="Site Id TP" wire:model.defer="data4.site_id_tp">
