@@ -26,6 +26,7 @@ class Import extends Component
         ]);
 
         Excel::import(new Data2Import, $this->file);
+        $this->reset(['file']);
 
         session()->flash('success', 'Berhasil menambahkan data dari file.');
 
