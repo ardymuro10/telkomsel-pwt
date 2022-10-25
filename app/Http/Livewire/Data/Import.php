@@ -16,6 +16,7 @@ class Import extends Component
 
     public function export()
     {
+        session()->flash('success', 'Berhasil mendownload data.');
         return Excel::download(new Data2Export, 'data-program-jpp.xlsx');
     }
 

@@ -4,7 +4,7 @@
     <div class="card">
         <div class="card-header">
             <button class="btn btn-primary" type="button" style="margin-right: 20px" wire:click="addAction" >Tambah <i class="ml-2 fas fa-plus"></i></button>
-            <button class="btn btn-success" type="button" style="margin-right: 20px" wire:click="viewEasy" >Upload <i class="ml-2 fas fa-upload"></i></button>
+            <button onclick="document.getElementById('ngaploud').value = '';" class="btn btn-success" type="button" style="margin-right: 20px" wire:click="viewEasy" >Upload <i class="ml-2 fas fa-upload"></i></button>
             <a class="btn btn-info" style="margin-right: 20px" href="{{route('contoheasy')}}" >Contoh <i class="ml-2 fas fa-info-circle"></i></a>
             <button class="btn btn-warning" type="button" wire:click="download" >Download <i class="ml-2 fas fa-download"></i></button>
         </div>
@@ -305,7 +305,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <label class="form-label">File Excel</label>
-                                <input type="file" class="form-control @error('file') is-invalid @enderror" wire:model="file">
+                                <input id="ngaploud" type="file" class="form-control @error('file') is-invalid @enderror" wire:model="file">
                                 <small style="font-style: italic"><b class="text-danger">*</b> format file harus .xlsx .xls</small>
                                 @error('file')
                                     <span class="invalid-feedback" role="alert">
@@ -325,3 +325,4 @@
     </div>
 
 </div>
+

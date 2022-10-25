@@ -167,6 +167,7 @@ class Index extends Component
 
     public function download()
     {
+        session()->flash('success', 'Berhasil mendownload data.');
         return Excel::download(new EasyExport, 'easy-proposal.xlsx');
     }
 
