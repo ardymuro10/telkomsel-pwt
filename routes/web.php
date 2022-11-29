@@ -28,6 +28,7 @@ Route::middleware('auth')->group(function () {
     Route::name('data.')->prefix('/data')->group(function () {
         Route::get('/data1', App\Http\Livewire\Data\Data1\Index::class)->name('data1');
         Route::get('/data2', App\Http\Livewire\Data\Data2\Index::class)->name('data2');
+        Route::get('/updatedata', App\Http\Livewire\Data\Updated\Index::class)->name('updatedata');
         Route::get('/eqp', App\Http\Livewire\Data\Data3\Index::class)->name('eqp');
         Route::get('/tower', App\Http\Livewire\Data\Data4\Index::class)->name('tower');
         Route::get('/review', App\Http\Livewire\Data\Data5\Index::class)->name('review');

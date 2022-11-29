@@ -40,7 +40,7 @@ class Index extends Component
 
     protected $rules = [
         'data3.unik' => ['required', 'string', 'max:100'],
-        'data3.unik_krdnt' => ['required', 'string', 'max:100'],
+        'data3.unik_krdnt' => ['string', 'max:100'],
         'data3.id_site' => ['required', 'string', 'max:100'],
         'data3.site_name' => ['required', 'string', 'max:100'],
         'data3.lat' => ['required', 'string'],

@@ -55,7 +55,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            {{-- <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="data3-unik-krdnt">Unik Koordinat</label>
                                     <input type="text" class="form-control @error('data3.unik_krdnt') is-invalid @enderror" id="data3-unik-krdnt" placeholder="Unik Koordinat" wire:model.defer="data3.unik_krdnt">
@@ -65,7 +65,7 @@
                                         </span>
                                     @enderror
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="data3-id-site">Id Site</label>
@@ -121,28 +121,6 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="data3-objective">Objective</label>
-                                    <input type="text" class="form-control @error('data3.objective') is-invalid @enderror" id="data3-objective" placeholder="Objective" wire:model.defer="data3.objective">
-                                    @error('data3.objective')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="data3-sow">SOW</label>
-                                    <input type="text" class="form-control @error('data3.sow') is-invalid @enderror" id="data3-sow" placeholder="SOW" wire:model.defer="data3.sow">
-                                    @error('data3.sow')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="data3-prog-jpp">Program JPP 2023</label>
@@ -159,6 +137,28 @@
                                     <label for="data3-prog-jppsimple">Program JPP 2023 Simple</label>
                                     <input type="text" class="form-control @error('data3.prog_jppsimple') is-invalid @enderror" id="data3-prog-jppsimple" placeholder="Program JPP 2023 Simple" wire:model.defer="data3.prog_jppsimple">
                                     @error('data3.prog_jppsimple')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="data3-objective">Objective</label>
+                                    <input type="text" class="form-control @error('data3.objective') is-invalid @enderror" id="data3-objective" placeholder="Objective" wire:model.defer="data3.objective">
+                                    @error('data3.objective')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="data3-sow">SOW</label>
+                                    <input type="text" class="form-control @error('data3.sow') is-invalid @enderror" id="data3-sow" placeholder="SOW" wire:model.defer="data3.sow">
+                                    @error('data3.sow')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>

@@ -49,12 +49,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="monitoring-site-id">Site Id</label>
-                                    <select class="form-control @error('monitoring.site_id') is-invalid @enderror" id="monitoring-site-id" wire:model.defer="monitoring.site_id">
-                                        <option value="">Pilih</option>
-                                        @foreach ($data2 as $item)
-                                            <option value="{{ $item->id_site }}">{{ Str::title($item->id_site) }}</option>
-                                        @endforeach
-                                    </select>
+                                    <input type="text" class="form-control @error('monitoring.site_id') is-invalid @enderror" id="monitoring-site-id" placeholder="Site Id" wire:model.defer="monitoring.site_id">
                                     @error('monitoring.site_id')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -65,12 +60,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="monitoring-site-name">Site Name</label>
-                                    <select class="form-control @error('monitoring.site_name') is-invalid @enderror" id="monitoring-site-name" wire:model.defer="monitoring.site_name">
-                                        <option value="">Pilih</option>
-                                        @foreach ($data2 as $item)
-                                            <option value="{{ $item->site_name }}">{{ Str::title($item->site_name) }}</option>
-                                        @endforeach
-                                    </select>
+                                    <input type="text" class="form-control @error('monitoring.site_name') is-invalid @enderror" id="monitoring-site-name" placeholder="Site Name" wire:model.defer="monitoring.site_name">
                                     @error('monitoring.site_name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -128,6 +118,21 @@
                                     <label for="monitoring-vendor">Vendor</label>
                                     <input type="text" class="form-control @error('monitoring.vendor') is-invalid @enderror" id="monitoring-vendor" placeholder="Vendor" wire:model.defer="monitoring.vendor">
                                     @error('monitoring.vendor')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for="monitoring-program">Program</label>
+                                    <select class="form-control @error('monitoring.program') is-invalid @enderror" id="monitoring-program" wire:model.defer="monitoring.program">
+                                        <option value="">Pilih</option>
+                                        <option value="upgrade capacity">{{ Str::title('upgrade capacity') }}</option>
+                                        <option value1="btf">{{ Str::upper('btf') }}</option>
+                                        <option value="permanenisasi combat">{{ Str::title('permanenisasi combat') }}</option>
+                                        <option value="new infra">{{ Str::title('new infra') }}</option>
+                                    </select>
+                                    @error('monitoring.program')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>

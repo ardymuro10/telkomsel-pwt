@@ -45,14 +45,18 @@ class Datatable extends DataTableComponent
             Column::make("Site Id", "site_id")
                 ->sortable()
                 ->searchable()
-                ->collapseOnTablet()
-                ->format(function($value, $row, Column $column) {
-                    return Str::title($value);
-                }),
+                ->collapseOnTablet(),
             Column::make("Site Name", "site_name")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
+            Column::make("Program", "program")
+                ->sortable()
+                ->searchable()
+                ->collapseOnTablet()
+                ->format(function($value, $row, Column $column) {
+                    return Str::upper($value);
+                }),
             Column::make("List Program", "list_program")
                 ->sortable()
                 ->searchable()

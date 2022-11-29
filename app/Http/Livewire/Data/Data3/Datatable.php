@@ -24,7 +24,7 @@ class Datatable extends DataTableComponent
     {
         $this->setPrimaryKey('id');
         $this->setDefaultSort('id', 'desc');
-        $this->setColumnSelectStatus(true);
+        $this->setColumnSelectStatus(false);
         $this->setTheadAttributes([
             'class' => 'text-nowrap',
         ]);
