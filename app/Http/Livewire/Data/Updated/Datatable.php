@@ -45,7 +45,7 @@ class Datatable extends DataTableComponent
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Unik krdnt", "unik_krdnt")
+            Column::make("Unik Koordinat", "unik_krdnt")
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),

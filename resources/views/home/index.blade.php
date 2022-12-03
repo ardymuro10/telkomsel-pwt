@@ -17,30 +17,33 @@ use Carbon\Carbon;
         <div class="col-6 col-md-6">
             <div class="small-box bg-primary">
                 <div class="inner" style="text-align: center">
-                    <h4 class="font-weight-bold card-header">Gagal Perpanjangan/BTF</h4>
-                    <h5 class="card-body">Total : {{ $totalData }}</h5>
+                    <h4 class="font-weight-bold card-header">Upgrade Capacity</h4>
+                    <h5 class="card-body">Total : {{ $countUpgradecap }}</h5>
                 </div>
             </div>
         </div>
         <div class="col-6 col-md-6">
             <div class="small-box bg-primary">
                 <div class="inner" style="text-align: center">
-                    <h4 class="font-weight-bold card-header">Infra Combat</h4>
-                    <div class="card-body">
-                        <h5>Total : {{ $countCombat }}</h5>
-                        <h5>Have Program : {{ $countCombathave }}</h5>
-                    </div>
+                    <h4 class="font-weight-bold card-header">BTF</h4>
+                    <h5 class="card-body">Total : {{ $countBTF }}</h5>
                 </div>
             </div>
         </div>
         <div class="col-6 col-md-6">
             <div class="small-box bg-primary">
                 <div class="inner" style="text-align: center">
-                    <h4 class="font-weight-bold card-header">Easy Pole</h4>
-                    <div class="card-body">
-                        <h5>Total : {{ $totalEasypole }}</h5>
-                        <h5>Have Program : {{ $countEasyhave }}</h5>
-                    </div>
+                    <h4 class="font-weight-bold card-header">Permanenisasi Combat</h4>
+                    <h5 class="card-body">Total : {{ $countPermanenisasi }}</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-6">
+            <div class="small-box bg-primary">
+                <div class="inner" style="text-align: center">
+                    <h4 class="font-weight-bold card-header">New Infra</h4>
+                    <h5 class="card-body">Total : {{ $countNewinfra }}</h5>
                 </div>
             </div>
         </div>

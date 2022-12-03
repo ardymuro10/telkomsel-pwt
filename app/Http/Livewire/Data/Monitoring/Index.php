@@ -43,7 +43,7 @@ class Index extends Component
     protected $rules = [
         'monitoring.site_id' => ['required'],
         'monitoring.site_name' => ['required', 'string', 'max:255'],
-        'monitoring.program' => ['required', 'string', 'in:upgrade capacity,btf,permanenisasi combat,new infra'],
+        'monitoring.program' => ['required', 'string', 'in:upgrade capacity,BTF,permanenisasi combat,new infra'],
         'monitoring.list_program' => ['required', 'string', 'max:255'],
         'monitoring.type_infra' => ['required', 'string', 'max:255'],
         'monitoring.owner_infra' => ['required', 'string', 'max:255'],
