@@ -53,6 +53,7 @@ class Data2Import implements ToModel, WithHeadingRow
             'isd_cattocomp' => $row['isd_cat_to_competitor'],
             'kompet' => $row['kompetitor'],
             'isd_usuljpp' => $row['isd_usulan_jpp'],
+            'isd_cat' => $row['isd_cat'],
             'sitename_rev' => $row['site_name'],
             'luas_hh' => $row['luas_household_km2'],
             'mrbad' => $row['mr_bad_105'],

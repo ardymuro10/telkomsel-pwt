@@ -44,7 +44,7 @@
                 <form wire:submit.prevent="{{ $form_mode[$mode]['action'] }}({{ $data3['id'] ?? null }})">
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="data3-unik">Unik</label>
                                     <input type="text" class="form-control @error('data3.unik') is-invalid @enderror" id="data3-unik" placeholder="Unik" wire:model.defer="data3.unik">
@@ -143,7 +143,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="data3-objective">Objective</label>
                                     <input type="text" class="form-control @error('data3.objective') is-invalid @enderror" id="data3-objective" placeholder="Objective" wire:model.defer="data3.objective">
@@ -154,7 +154,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="data3-sow">SOW</label>
                                     <input type="text" class="form-control @error('data3.sow') is-invalid @enderror" id="data3-sow" placeholder="SOW" wire:model.defer="data3.sow">

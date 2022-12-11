@@ -57,7 +57,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            {{-- <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="data5-unik-krdnt">Unik Koordinat</label>
                                     <input type="text" class="form-control @error('data5.unik_krdnt') is-invalid @enderror" id="data5-unik-krdnt" placeholder="Unik Koordinat" wire:model.defer="data5.unik_krdnt">
@@ -67,7 +67,7 @@
                                         </span>
                                     @enderror
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="data5-id-site">Id Site</label>
@@ -145,7 +145,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="data5-tp-id">TP Id</label>
                                     <input type="text" class="form-control @error('data5.tp_id') is-invalid @enderror" id="data5-tp-id" placeholder="TP Id" wire:model.defer="data5.tp_id">
@@ -216,6 +216,17 @@
                                     <label for="data5-isd-usuljpp">ISD Usulan JPP</label>
                                     <input type="text" class="form-control @error('data5.isd_usuljpp') is-invalid @enderror" id="data5-isd-usuljpp" placeholder="ISD Usulan JPP" wire:model.defer="data5.isd_usuljpp">
                                     @error('data5.isd_usuljpp')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="data5-isd-cat">ISD CAT</label>
+                                    <input type="text" class="form-control @error('data5.isd_cat') is-invalid @enderror" id="data5-isd-cat" placeholder="ISD CAT" wire:model.defer="data5.isd_cat">
+                                    @error('data5.isd_cat')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>

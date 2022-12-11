@@ -45,6 +45,7 @@ class Data2 extends Model
         'isd_cattocomp',
         'kompet',
         'isd_usuljpp',
+        'isd_cat',
         'sitename_rev',
         'luas_hh',
         'mrbad',

@@ -57,7 +57,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            {{-- <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="data9-unik-krdnt">Unik Koordinat</label>
                                     <input type="text" class="form-control @error('data9.unik_krdnt') is-invalid @enderror" id="data9-unik-krdnt" placeholder="Unik Koordinat" wire:model.defer="data9.unik_krdnt">
@@ -67,7 +67,7 @@
                                         </span>
                                     @enderror
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="data9-id-site">Id Site</label>

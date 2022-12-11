@@ -52,7 +52,7 @@ return new class extends Migration
             $table->string('isd_cattocomp')->nullable();
             $table->string('kompet')->nullable();
             $table->string('isd_usuljpp')->nullable();
-            // $table->string('isd_cat')->nullable();
+            $table->string('isd_cat')->nullable();
             $table->string('sitename_rev')->nullable();
             $table->string('luas_hh')->nullable();
             // $table->string('cat_hh')->nullable();

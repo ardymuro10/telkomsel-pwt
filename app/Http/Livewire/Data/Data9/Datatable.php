@@ -47,10 +47,12 @@ class Datatable extends DataTableComponent
                 ->sortable()
                 ->searchable()
                 ->collapseOnTablet(),
-            Column::make("Unik Koordinat", "unik_krdnt")
-                ->sortable()
-                ->searchable()
-                ->collapseOnTablet(),
+            Column::make('Unik Koordinat', 'id')
+                ->format(function($value, $row, Column $column) {
+                    return view('components.datatable.showlonglat', [
+                        'value' => $value
+                    ]);
+                }),
             Column::make("Site Id", "id_site")
                 ->sortable()
                 ->searchable()

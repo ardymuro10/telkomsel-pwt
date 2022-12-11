@@ -56,6 +56,7 @@ class Data2Export implements FromCollection, WithHeadings
             'ISD Cat to Competitor',
             'Kompetitor',
             'ISD Usulan JPP',
+            'ISD CAT',
             'Site Name',
             'Luas HouseHold (km2)',
             'MR Bad (<=-105)',

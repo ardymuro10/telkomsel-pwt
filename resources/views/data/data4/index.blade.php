@@ -44,7 +44,7 @@
                 <form wire:submit.prevent="{{ $form_mode[$mode]['action'] }}({{ $data4['id'] ?? null }})">
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="data4-unik">Unik</label>
                                     <input type="text" class="form-control @error('data4.unik') is-invalid @enderror" id="data4-unik" placeholder="Unik" wire:model.defer="data4.unik">
@@ -55,7 +55,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            {{-- <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="data4-unik-krdnt">Unik Koordinat</label>
                                     <input type="text" class="form-control @error('data4.unik_krdnt') is-invalid @enderror" id="data4-unik-krdnt" placeholder="Unik Koordinat" wire:model.defer="data4.unik_krdnt">
@@ -65,7 +65,7 @@
                                         </span>
                                     @enderror
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="data4-id-site">Id Site</label>
