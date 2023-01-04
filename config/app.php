@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Telkomsel PWT'),
+    'name' => env('APP_NAME', 'Telkomsel Jatimbalnus'),
 
     /*
     |--------------------------------------------------------------------------

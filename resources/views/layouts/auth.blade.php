@@ -21,7 +21,7 @@
     <div class="login-box mt-0">
         <div class="login-logo">
             <img src="{{ asset('img/logo.png') }}" height="130" width="130" style="margin-left: auto; margin-right:auto; display:block;"/>
-            <a href="{{ route('login') }}" class="font-weight-bold">Telkomsel Regional 5</a>
+            <a href="{{ route('login') }}" class="font-weight-bold">Telkomsel Regional Jatimbalnus</a>
         </div>
         <div class="card">
             @yield('content')

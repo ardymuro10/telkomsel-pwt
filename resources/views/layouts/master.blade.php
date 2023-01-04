@@ -40,7 +40,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-flex align-items-center">
-                    <p class="h5 mb-0">Telkomsel Regional 5</p>
+                    <p class="h5 mb-0">Telkomsel Jatimbalnus</p>
                 </li>
             </ul>
         </nav>

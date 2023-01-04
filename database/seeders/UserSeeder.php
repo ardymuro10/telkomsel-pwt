@@ -24,7 +24,7 @@ class UserSeeder extends Seeder
         if (!$user) {
             User::create([
                 'name' => 'Admin',
-                'email' => 'admin@tsel-reg5.test',
+                'email' => 'admin@tsel-jatimbalnus.test',
                 'email_verified_at' => now(),
                 'password' => bcrypt(12345678),
             ]);
